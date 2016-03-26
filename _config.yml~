@@ -17,10 +17,12 @@ owner:
 gavatar: img/head.png
 favicon: img/favicon.ico
 
+#douban_username: Azeril
 twitter_username: feihen1991 
 github_username: nuaa-wangj  
 facebook_username: feihen1991  
 weibo_username: 飞恨  
+#zhihu_username: Azeril  
 
 # Build settings  
 # use Github Flavored Markdown !important  
