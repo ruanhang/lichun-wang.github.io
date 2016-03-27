@@ -1,6 +1,6 @@
 # Site settings
 title: Trace Flight
-header-img: "img/autumn2.jpg"
+header-img: "img/pages/template.jpg"
 tagline: "飞痕"  
 description: "追寻飞翔的痕迹"  
 baseurl: ""
@@ -52,7 +52,7 @@ defaults:
     values:
       layout: "post"
       author: "flighttracer"
-      header-img: "img/fantasy.jpg" # We don't want posts without a header image, that whould mean white on white
+      header-img: "img/pages/template.jpg" # We don't want posts without a header image, that whould mean white on white
 
 
 # Comments 

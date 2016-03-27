@@ -1,6 +1,6 @@
 # Site settings
 title: Trace Flight
-header-img: "img/autumn2.jpg"
+header-img: "img/pages/template.jpg"
 tagline: "飞痕"  
 description: "追寻飞翔的痕迹"  
 baseurl: ""
@@ -17,12 +17,10 @@ owner:
 gavatar: img/head.png
 favicon: img/favicon.ico
 
-#douban_username: Azeril
 twitter_username: feihen1991 
 github_username: nuaa-wangj  
 facebook_username: feihen1991  
 weibo_username: 飞恨  
-#zhihu_username: Azeril  
 
 # Build settings  
 # use Github Flavored Markdown !important  
@@ -53,15 +51,15 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      author: "flytraces"
-      header-img: "img/fantasy.jpg" # We don't want posts without a header image, that whould mean white on white
+      author: "flighttracer"
+      header-img: "img/pages/template.jpg" # We don't want posts without a header image, that whould mean white on white
 
 
 # Comments 
 comments :
-  provider : Disqus
-  disqus :
-      short_name : traceflightblog
+  provider : duoshuo
+  duoshuo :
+      short_name : traceflight
 
 # Analytics and webmaster tools stuff goes here
 google_analytics: UA-66863061-1
