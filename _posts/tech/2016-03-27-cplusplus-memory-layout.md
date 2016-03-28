@@ -9,7 +9,7 @@ description:
 
 # C/C++局部变量在栈区的存储情况分析
 ---
-> 
+>  最近看到同学书上写了个例子，关于strcpcy导致的内存覆盖问题，自己实验后发现与书上所讲结果不同。之后跟同学一起深入分析了一段程序，分析结果如下文。
 
 ## 考虑如下代码的运行结果（在vc++编译器中运行）
 
@@ -91,6 +91,22 @@ int main()
 
 *(sizeof()函数返回值包括字符数组结尾的’\0’,上式中的数字8为间隔字节数，根据编译器不同而不同)*
 
+strcpy函数的执行逻辑，如下所示：
+
+~~~ c++
+_TCHAR *_tcscpy(_TCHAR *pDst, const _TCHAR *pSrc)
+{
+    _TCHAR * r = pDst;
+
+    while ((*pDst++ = *pSrc++) != '\0')
+        continue;
+
+    return r;
+}
+~~~
+
+在进行字符串复制时，仅检查源字符串的结尾，而不对目的字符串的长度进行检查。
+
 ## 重新分析文章开头的例子
 
 再看一下代码
@@ -123,4 +139,14 @@ int main()
 	d = abcdefghijklmn
 ~~~~~
 
-*注：Linux下gcc编译运行结果不同，其s值未变，原因为gcc为变量间分配的间隔为12字节，因此可增加s字符串的长度，实现类似的效果，如char s[]="abcdefghijklmnopqr"，则输出s为qr。*
+*注：Linux下gcc编译运行结果不同，原因为gcc为变量间分配的间隔为12字节，因此可增加s字符串的长度，实现类似的效果，如char s[]="abcdefghijklmnopqr"，则输出s为qr。*
+
+## 结论
+
+MSDN上给出的建议是：
+
+ To avoid overflows, the size of the array pointed by destination shall be long enough to contain the same C string as source (including the terminating null character), and should not overlap in memory with source. Because strcpy does not check for sufficient space in strDestination before it copies strSource, it is a potential cause of buffer overruns. Therefore, we recommend that you use strcpy_s instead. -- MSDN
+ 
+即在使用strcpy是需要对目标字符串的长度进行事先判定，使其至少等于源字符串，或者改用strcpy_s函数。
+
+* 以上内容为我自己实验结果所得，如有疑问可自行实验后告知，谢谢～*
