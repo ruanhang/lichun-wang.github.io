@@ -6,7 +6,7 @@ header-img: "img/pages/about.jpg"
 ---
 
 <center>
-    <p><img src="img/head.png" align="center"></p>
+    <p><img src="https://raw.githubusercontent.com/nuaa-wangj/nuaa-wangj.github.io/master/img/head.png" align="center"></p>
 </center>
 
 
