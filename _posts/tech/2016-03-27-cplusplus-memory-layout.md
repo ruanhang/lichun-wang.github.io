@@ -66,7 +66,7 @@ int main()
 其中各变量在栈中的存储情况**示意图**如下所示：
 
 <center>
-    <p><img src="https://raw.githubusercontent.com/nuaa-wangj/nuaa-wangj.github.io/master/img/blogs/blog-memory-example.svg" align="center"></p>
+    <p><img src="https://raw.githubusercontent.com/nuaa-wangj/nuaa-wangj.github.io/master/img/blogs/blog-memory-example.png" align="center"></p>
 </center>
 
 说明：
@@ -113,7 +113,7 @@ int main()
 根据上面分析，可以将内存中的情况画出如下所示的图：
 
 <center>
-    <p><img src="https://raw.githubusercontent.com/nuaa-wangj/nuaa-wangj.github.io/master/img/blogs/blog-memory-analysis.svg" align="center"></p>
+    <p><img src="https://raw.githubusercontent.com/nuaa-wangj/nuaa-wangj.github.io/master/img/blogs/blog-memory-analysis.png" align="center"></p>
 </center>
 
 可以发现，字符串s被d的内容覆盖掉了，可以看到字符串d会被截断，因此，字符串（以’\0’结尾）输出结果为
