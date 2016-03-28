@@ -5,9 +5,7 @@ description: "嘿，你总算找到我啦"
 header-img: "img/pages/about.jpg"
 ---
 
-<center>
-    <p><img src="https://raw.githubusercontent.com/nuaa-wangj/nuaa-wangj.github.io/master/img/head.png" align="center"></p>
-</center>
+
 
 
 
