@@ -47,7 +47,7 @@ layout: default
                 </ul>
 		-->
 
-                <!-- Duoshuo Share start -->
+                <!-- Duoshuo Share start 
                 <style>
                     .ds-share{
                         text-align: right;
@@ -77,25 +77,45 @@ layout: default
                       </div>
                     </div>
                 <hr>
-                </div>
+                </div>-->
                 <!-- Duoshuo Share end-->
 
 
 
 
-                <!-- 多说评论框 start -->
+                <!-- 多说评论框 start 
                 <div class="comment">
                     <div class="ds-thread" data-thread-key="{{page.id}}" data-title="{{page.title}}" data-url="{{site.url}}{{page.url}}"></div>
-                </div>
+                </div> -->
                 <!-- 多说评论框 end -->
+
+		<!-- Post comments -->
+		<div class="notecomments">
+			{% include disqus.html %}	 
+		</div>
             </div>
         </div>
     </div>
 </article>
 
 
+<!-- disqus公共JS代码 -->	
+<script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'traceflightblog'; // required: replace example with your forum shortname
+      // var disqus_developer = 1; // Comment out when the site is live
 
-<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+      }());
+</script>
+<!-- disqus公共JS代码 -->	
+
+<!-- 多说公共JS代码 start (一个网页只需插入一次) 
 <script type="text/javascript">
 var duoshuoQuery = {short_name:"traceflight"};
     (function() {
@@ -106,7 +126,7 @@ var duoshuoQuery = {short_name:"traceflight"};
         (document.getElementsByTagName('head')[0]
          || document.getElementsByTagName('body')[0]).appendChild(ds);
     })();
-</script>
+</script>-->
 <!-- 多说公共JS代码 end -->
 
 
