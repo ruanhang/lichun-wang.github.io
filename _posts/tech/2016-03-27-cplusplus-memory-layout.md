@@ -147,6 +147,6 @@ MSDN上给出的建议是：
 
  To avoid overflows, the size of the array pointed by destination shall be long enough to contain the same C string as source (including the terminating null character), and should not overlap in memory with source. Because strcpy does not check for sufficient space in strDestination before it copies strSource, it is a potential cause of buffer overruns. Therefore, we recommend that you use strcpy_s instead. -- MSDN
  
-即在使用strcpy是需要对目标字符串的长度进行事先判定，使其至少等于源字符串，或者改用strcpy_s函数。
+即在使用strcpy时需要对目标字符串的长度进行事先判定，使其至少等于源字符串，或者改用strcpy_s函数。
 
 * 以上内容为我自己实验结果所得，如有疑问可自行实验后告知，谢谢～
