@@ -58,12 +58,12 @@ defaults:
 
 # Comments 
 comments :
-#  provider : duoshuo
-#  duoshuo :
-#      short_name : traceflight
-  provider : Disqus
-  disqus :
-      short_name : traceflightblog
+  provider : duoshuo
+  duoshuo :
+      short_name : traceflight
+#  provider : Disqus
+#  disqus :
+#      short_name : traceflightblog
 
 # Analytics and webmaster tools stuff goes here
 google_analytics: UA-66863061-1
