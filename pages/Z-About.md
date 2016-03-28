@@ -6,7 +6,7 @@ header-img: "img/pages/about.jpg"
 ---
 
 <center>
-    <p><img src="http://dreamofbook.qiniudn.com/Zero.png" align="center"></p>
+    <p><img src="img/head.png" align="center"></p>
 </center>
 
 
