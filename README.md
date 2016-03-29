@@ -12,7 +12,7 @@ This is my personal blog modified from [Microdust](https://github.com/Azeril/aze
 ## How to use it as your own blog?
 
 1. First, you should know some basics. Here is a guide [Creating and Hosting a Personal Site on GitHub](http://jmcglone.com/guides/github-pages/). It shows brief description of [Git](git-scm.com), [GitHub](github.com), [GitHub Pages](https://pages.github.com/) and [Jekyll](jekyllrb.com).
-2. Then follow the guide to creat your first blog. Though sample, it is really useful for you to understand Jekyll.
-3. After that, you should know how to creat a site on github online, but this is not enough. Then you need to [install Jekyll](https://jekyllrb.com/docs/quickstart/) on your pc in order to view your blog in real-time.
+2. Then follow the guide to creat your first blog. Though simple, it is really useful for you to understand Jekyll.
+3. After that, you have known how to creat a site on github online, but this is not enough. Then you need to [install Jekyll](https://jekyllrb.com/docs/quickstart/) on your pc in order to view your blog in real-time.
 4. To perform this blog on pc you also need to install *jekyll-gallery-generator* and *jekyll-paginate* by gem. Before that you should install *libmagickwand-dev* and *imagemagick* by apt-get or yum depending on you linux distribution.
 5. Finally, fork this repository and rename to your own username. Clone it and modify as you want. Enjoy it!

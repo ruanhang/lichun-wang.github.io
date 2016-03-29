@@ -52,7 +52,7 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      author: "flighttracer"
+      author: "Flight Tracer"
       header-img: "img/pages/template.jpg" # We don't want posts without a header image, that whould mean white on white
 
 

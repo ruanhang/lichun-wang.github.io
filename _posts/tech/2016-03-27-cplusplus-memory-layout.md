@@ -57,7 +57,7 @@ int main()
 	char c='w',d='x';
 	char e[] = "abcz";
 	char f[] = "def";
-	return 1；
+	return 1;
 }
 ~~~
 
