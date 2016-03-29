@@ -16,7 +16,7 @@ header-img: "img/pages/template.jpg"
 * 有学术味道
 * 有实验室特色
 
-当然其中的文字不乏错误，图片也有待完善，就留作改进的地方吧。
+该内容纯属娱乐～其中的病句与图片中的错误就当做我现在文字水平的见证吧。
 <center>
     <p><img src="https://raw.githubusercontent.com/nuaa-wangj/nuaa-wangj.github.io/master/img/blogs/blog-invitation-20160329.jpg" align="center"></p>
 </center>
