@@ -18,5 +18,5 @@ header-img: "img/pages/template.jpg"
 
 当然其中的文字不乏错误，图片也有待完善，就留作改进的地方吧。
 <center>
-    <p><img src="https://raw.githubusercontent.com/nuaa-wangj/nuaa-wangj.github.io/master/img/blogs/blog-invitation-20160329.png" align="center"></p>
+    <p><img src="https://raw.githubusercontent.com/nuaa-wangj/nuaa-wangj.github.io/master/img/blogs/blog-invitation-20160329.jpg" align="center"></p>
 </center>
