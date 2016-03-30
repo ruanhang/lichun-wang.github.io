@@ -9,7 +9,6 @@ header-img: "img/pages/template.jpg"
 
 
 
-# 毕业宴请邀请函
 ----
 为了庆祝师兄师姐圆满毕业，花了点时间写（画）了下面的邀请函。
 
