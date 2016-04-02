@@ -6,7 +6,7 @@ This is my personal blog modified from [Microdust](https://github.com/Azeril/aze
 
 * Reorganize the folders structure for more elegent look. Such as move *`Tools.md, About.md, Lists.md, tags.html`* to folder *`pages`*, merge folder *`img`* and *`images`*.
 * Redesign same pages' logic. Some buttons on top right of the tab bar can not just display a static markdown page but a list of blogs classified by category. So it is fair to these buttons.
-* Removo some useless functions in my opinion. For example, remove tags above title. And in [Microdust](https://github.com/Azeril/azeril.github.io) a click on these tags will led to 404 page.
+* Remove some useless functions in my opinion. For example, remove tags above title. And in [Microdust](https://github.com/Azeril/azeril.github.io) a click on these tags will led to 404 page.
 * ...
 
 ## How to use it as your own blog?
@@ -15,4 +15,4 @@ This is my personal blog modified from [Microdust](https://github.com/Azeril/aze
 2. Then follow the guide to creat your first blog. Though simple, it is really useful for you to understand Jekyll.
 3. After that, you have known how to creat a site on github online, but this is not enough. Then you need to [install Jekyll](https://jekyllrb.com/docs/quickstart/) on your pc in order to view your blog in real-time.
 4. To perform this blog on pc you also need to install *jekyll-gallery-generator* and *jekyll-paginate* by gem. Before that you should install *libmagickwand-dev* and *imagemagick* by apt-get or yum depending on you linux distribution.
-5. Finally, fork this repository and rename to your own username. Clone it and modify as you want. Enjoy it!
+5. Finally, delete the repository you created for test, then fork this repository and rename to your own username. Clone and modify it as you want. Enjoy it!
