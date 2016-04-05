@@ -12,7 +12,7 @@ header-img: "img/pages/template.jpg"
 ----
 > 恶意勒索软件（[Ransomware](https://en.wikipedia.org/wiki/Ransomware)）通过加密、锁定等方式破坏用户对计算机软硬件系统或文件资源的访问，感染后的数据难以用现有的方法恢复，用户需要支付一定的赎金才能重新获得访问权。随着黑客技术的不断提高，恶意勒索软件已经成为一种难以追踪且能够获得大量非法收入的手段。近期已有多家医院和医疗服务机构受到勒索攻击，并带来了不小的经济损失。其他企业和个人也成为攻击对象，需要引起足够的重视。
 
-## 恶意勒索软件一般实施流程
+## 恶意勒索软件一般实施流程 ##
 
 1. **勒索软件传播**。利用特洛伊木马、僵尸网络、系统漏洞或社会工程学方法。常见传播方法为：发送垃圾邮件。邮件往往伪装为由合法公司发送，标题通常为发票、协议修改等，如：`ATTN: Invoice J-6xxxxxx`， `FW: Payment #xxxxx`。邮件附件为word文档，或者修改了后缀的Zip压缩文件（如修改为.pdf并且将文档的图标作相应修改），或者为JavaScript脚本。也有勒索软件在邮件中给出一个Dropbox链接，诱导用户下载。
 
@@ -29,7 +29,7 @@ header-img: "img/pages/template.jpg"
 
 5. **交还控制权限**。在用户支付赎金后，攻击者会使用技术手段交还对软硬件或文件系统的控制权。对于加密型的勒索软件，一般给用户下载一个定制的解密工具以及解密密钥，来恢复被加密的数据。
 
-## 恶意软件常用的技术、手段和工具
+## 恶意软件常用的技术、手段和工具 ##
 
 * **Social Engineering （社会工程学）**
 
@@ -60,53 +60,49 @@ header-img: "img/pages/template.jpg"
   僵尸网络病毒Gameover ZeuS被美国FBI成为“史上最复杂、最具破坏性的网络僵尸病毒”，尽管在2014年反僵尸网络组织Operation Tovar已经中断了其运行,但危险依然存在。Gameover ZeuS不仅会利用ZeuS木马感染计算机，窃取在线电子邮件账户、社交网络和网银于其他在线金融服务，还会传播Cryptolocker，从而加密数据并索要赎金。
 
 
-## 近期流行的恶意勒索软件
+## 近期流行的恶意勒索软件 ##
 
 近期恶意软件十分猖獗，出现了大量的恶意勒索软件变种，下面仅对部分进行罗列，并给出相关报道，如希望详细了解，可以自行网络检索。
 
-#### Locky
+1. **Locky**
 
-  McAfee （迈克菲）: [Locky Ransomware Arrives via Email Attachment](https://blogs.mcafee.com/mcafee-labs/locky-ransomware-arrives-via-email-attachment/) 2016.03.11
+  * McAfee （迈克菲）: [Locky Ransomware Arrives via Email Attachment](https://blogs.mcafee.com/mcafee-labs/locky-ransomware-arrives-via-email-attachment/) 2016.03.11
+  * Avast （爱维士）: [A closer look at the Locky ransomware](https://blog.avast.com/a-closer-look-at-the-locky-ransomware) 2016.03.10
+  * Avira （小红伞）: [Locky ransomware is dead, long live Locky](http://blog.avira.com/locky-ransomware-is-dead-long-live-locky) 2016.03.01
 
-  Avast （爱维士）: [A closer look at the Locky ransomware](https://blog.avast.com/a-closer-look-at-the-locky-ransomware) 2016.03.10
+2. **CTB-Locker （Web服务器版本）**
 
-  Avira （小红伞）: [Locky ransomware is dead, long live Locky](http://blog.avira.com/locky-ransomware-is-dead-long-live-locky) 2016.03.01
+  * Securelist （卡巴斯基实验室）: [CTB-Locker is back: the web server edition](https://securelist.com/blog/research/73989/ctb-locker-is-back-the-web-server-edition/) 2016.03.01
 
-#### CTB-Locker （Web服务器版本）
+3. **Cerber**
 
-  Securelist （卡巴斯基实验室）: [CTB-Locker is back: the web server edition](https://securelist.com/blog/research/73989/ctb-locker-is-back-the-web-server-edition/) 2016.03.01
+  * Malwarebytes Labs: [Cerber Ransomware - New, But Mature](https://blog.malwarebytes.org/threat-analysis/2016/03/cerber-ransomware-new-but-mature/) 2016.03.11
 
-#### Cerber
+4. **Petya （破坏文件系统的主引导分区MBR和主文件表MFT）**
 
-  Malwarebytes Labs: [Cerber Ransomware - New, But Mature](https://blog.malwarebytes.org/threat-analysis/2016/03/cerber-ransomware-new-but-mature/) 2016.03.11
+  * G Data : [Randomeware Petya - a technical review](https://blog.gdatasoftware.com/2016/03/28226-ransomware-petya-a-technical-review) 2016.03.31
+  * Bleeping Computer: [Petya Ransomware skips the Files and Encrypts your Hard Drive Instead](http://www.bleepingcomputer.com/news/security/petya-ransomware-skips-the-files-and-encrypts-your-hard-drive-instead/) 2016.03.25
 
-#### Petya （破坏文件系统的主引导分区MBR和主文件表MFT）
+5. **LeChiffre**
 
-  G Data : [Randomeware Petya - a technical review](https://blog.gdatasoftware.com/2016/03/28226-ransomware-petya-a-technical-review) 2016.03.31
+  * Malwarebytes Labs: [LeChiffre, Ransomware Ran Manually](https://blog.malwarebytes.org/threat-analysis/2016/01/lechiffre-a-manually-run-ransomware/) 2016.01.22
+  * McAfee （迈克菲）: [McAfee Labs Unlocks LeChiffre Ransomware](https://blogs.mcafee.com/mcafee-labs/mcafee-labs-unlocks-lechiffre-ransomware/) 2016.03.28
 
-  Bleeping Computer: [Petya Ransomware skips the Files and Encrypts your Hard Drive Instead](http://www.bleepingcomputer.com/news/security/petya-ransomware-skips-the-files-and-encrypts-your-hard-drive-instead/) 2016.03.25
+6. **Maktub Locker （美丽又危险的勒索软件）**
 
-#### LeChiffre
+  * Malwarebytes Labs: [Maktub Locker - Beautiful And Dangerous ](https://blog.malwarebytes.org/threat-analysis/2016/03/maktub-locker-beautiful-and-dangerous/) 2016.03.24
 
-  Malwarebytes Labs: [LeChiffre, Ransomware Ran Manually](https://blog.malwarebytes.org/threat-analysis/2016/01/lechiffre-a-manually-run-ransomware/) 2016.01.22
+7. **TeslaCrypt**
 
-  McAfee （迈克菲）: [McAfee Labs Unlocks LeChiffre Ransomware](https://blogs.mcafee.com/mcafee-labs/mcafee-labs-unlocks-lechiffre-ransomware/) 2016.03.28
+  * Fortinet: [Nemucod Adds Ransomware Routine](http://blog.fortinet.com/post/nemucod-adds-ransomware-routine) 2016.03.16
 
-#### Maktub Locker （美丽又危险的勒索软件）
+8. **Criakl**
 
-  Malwarebytes Labs: [Maktub Locker - Beautiful And Dangerous ](https://blog.malwarebytes.org/threat-analysis/2016/03/maktub-locker-beautiful-and-dangerous/) 2016.03.24
+  * Phishme: [Ransomware Rising – Criakl, OSX, and others – PhishMe Tracks Down Hackers, Identifies Them and Provides Timeline of Internet Activities](http://phishme.com/ransomware-rising-criakl-osx-others/) 2016.03.10
 
-#### TeslaCrypt
+## 防御方法 ##
 
-  Fortinet: [Nemucod Adds Ransomware Routine](http://blog.fortinet.com/post/nemucod-adds-ransomware-routine) 2016.03.16
-
-#### Criakl
-
-  Phishme: [Ransomware Rising – Criakl, OSX, and others – PhishMe Tracks Down Hackers, Identifies Them and Provides Timeline of Internet Activities](http://phishme.com/ransomware-rising-criakl-osx-others/) 2016.03.10
-
-## 防御方法
-
-### 通过技术手段
+### 通过技术手段 ###
 
 
 近期，法国[Lexsi](www.lexsi.com)的研究人员研究了使用疫苗（vaccine）对抗Locky的方法。（由于恶意软件频繁出现变种，下列方法仅作为参考）
@@ -115,25 +111,36 @@ header-img: "img/pages/template.jpg"
   * [Abusing bugs in the Locky ransomware to create a vaccine](https://www.lexsi.com/securityhub/abusing-bugs-in-the-locky-ransomware-to-create-a-vaccine/?lang=en) 2016.03.22
 
 采用的方法主要为：
+
   1. 将语言设置为俄语（部分恶意勒索软件对语言为俄语的系统不做处理），该方法对很多人不适用；
+
   2. 手动创建注册表值`HKEY_CURRENT_USER\Software\Locky`，并设置ACLs保护，阻止所有用户修改。该方法有效的原因为，在检查完语言后，Locky尝试创建`HKEY_CURRENT_USER\Software\Locky`，当创建失败时，Locky会立刻终止；
+
   3. 设置注册表id和completed值，欺骗Locky认为系统已经加密完毕。
+
   4. 破坏注册表中RSA pubkey，使得Locky重命名文档而不加密；
+
   5. 使用已知RSA密钥，由于Locky在加密前未对pubkey进行验证，因此可以设置已知的RSA公钥，即使Locky将文件加密，也可通过已知的私钥进行解密。
 
 *这里只做简单介绍，具体方法参考文章 [Abusing bugs in the Locky ransomware to create a vaccine](https://www.lexsi.com/securityhub/abusing-bugs-in-the-locky-ransomware-to-create-a-vaccine/?lang=en)。*
 
 
 
-### 增强安全意识
+### 增强安全意识 ###
 
 增强安全意识对于保护系统免受恶意软件攻击具有至关重要的意义，主要的方法有：
+
 1. 定期备份重要文件，文件备份后要与主机断开；
+
 2. 对可疑邮件进行确认，确保为合法邮件后再打开邮件，下载附件；
+
 3. 不随意打开网络链接，防止下载恶意软件；
+
 4. 默认关闭office的宏，不要在浏览邮件附件文档是打开它；
+
 5. 安装先进的防病毒软件（建议使用国外的知名软件），并定期更新和扫描；
+
 6. 对使用的操作系统和应用软件及时打好补丁。
 
-### 针对企业用户
+### 针对企业用户 ###
 老牌代码安全审计机构[NCC Group](https://www.nccgroup.trust) 于2016年3月11日针对企业发布了[Ransomware: what orgnisations can do to survive](https://www.nccgroup.trust/uk/our-research/ransomware-what-organisations-can-do-to-survive/)，帮助企业如何能够最大限度的减少初次感染的可能性。

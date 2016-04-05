@@ -3,14 +3,14 @@ layout: post
 title:  "C/C++局部变量在栈区的存储情况分析"
 category: tech
 tags: [memory,stack,]
-description: 
+description:
 ---
 
 
 ---
 >  最近看到同学书上写了个例子，关于strcpcy导致的内存覆盖问题，自己实验后发现与书上所讲结果不同。之后跟同学一起深入分析了一段程序，分析结果如下文。
 
-## 考虑如下代码的运行结果（在vc++编译器中运行）
+## 考虑如下代码的运行结果（在vc++编译器中运行） ##
 
 ~~~ c++
 #include <iostream>
@@ -29,7 +29,7 @@ int main()
 
 一般看到这个题，最先的反应是，字符串s是源串，肯定不会变...但是，神奇的是s真的变了！我们来看看为什么～
 
-## 变量在内存中的存储情况
+## 变量在内存中的存储情况 ##
 
 一个由C/C++编译的程序占用的内存分为以下几个部分
 
@@ -38,12 +38,12 @@ int main()
 * **堆区** — 一般由程序员分配释放， 若程序员不释放，程序结束时可能由OS回收 。注意它与数据结构中的堆是两回事。
 
 * **全局/静态存储区** — 全局变量和静态变量被分配到同一块内存中，在以前的 C 语言中，全局变量又分为初始化的和未初始化的（初始化的全局变量和静态变量在一块区域，未初始化的全局变量与静态变量在相邻的另一块区域，同时未被初始化的对象存储区可以通过 void* 来访问和操纵，程序结束后由系统自行释放），在 C++ 里面没有这个区分了，他们共同占用同一块内存区。
- 
+
 * **常量存储区** — 这是一块比较特殊的存储区，他们里面存放的是常量，不允许修改（当然，你要通过非正当手段也可以修改，而且方法很多）
 
 *上面的文字摘抄自网络，具体的区别可以自行谷歌。这里只分析栈区的内存情况，其他的可以自己研究。*
 
-## 开始实例分析
+## 开始实例分析 ##
 
 现在看如下代码
 
@@ -106,7 +106,7 @@ _TCHAR *_tcscpy(_TCHAR *pDst, const _TCHAR *pSrc)
 
 在进行字符串复制时，仅检查源字符串的结尾，而不对目的字符串的长度进行检查。
 
-## 重新分析文章开头的例子
+## 重新分析文章开头的例子 ##
 
 再看一下代码
 
@@ -140,12 +140,12 @@ int main()
 
 *注：Linux下gcc编译运行结果不同，原因为gcc为变量间分配的间隔为12字节，因此可增加s字符串的长度，实现类似的效果，如char s[]="abcdefghijklmnopqr"，则输出s为qr。*
 
-## 结论
+## 结论 ##
 
 MSDN上给出的建议是：
 
  To avoid overflows, the size of the array pointed by destination shall be long enough to contain the same C string as source (including the terminating null character), and should not overlap in memory with source. Because strcpy does not check for sufficient space in strDestination before it copies strSource, it is a potential cause of buffer overruns. Therefore, we recommend that you use strcpy_s instead. -- MSDN
- 
+
 即在使用strcpy时需要对目标字符串的长度进行事先判定，使其至少等于源字符串，或者改用strcpy_s函数。
 
 * 以上内容为我自己实验结果所得，如有疑问可自行实验后告知，谢谢～
