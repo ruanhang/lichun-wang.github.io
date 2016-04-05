@@ -16,13 +16,19 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href="{{ site.baseurl }}/">All Blogs</a>
+                    <a href="{{ site.baseurl }}/">Home</a>
                 </li>
-                {% for page in site.pages %}{% if page.title %}
+                {% for page in site.pages %}{% if page.tabbar %}
                 <li>
                     <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
                 </li>
                 {% endif %}{% endfor %}
+                <li>
+                    <a href="{{ site.baseurl }}/pages/Tags.html">Tags</a>
+                </li>
+                <li>
+                    <a href="{{ site.baseurl }}/pages/About.html">About</a>
+                </li>
 
             </ul>
         </div>

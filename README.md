@@ -1,6 +1,6 @@
 # Trace Flight 
 
-This is my personal blog modified from [Microdust](https://github.com/Azeril/azeril.github.io) which is based on  [Clean Blog theme by Start Bootstrap](https://github.com/BlackrockDigital/startbootstrap-clean-blog-jekyll). The theme is designed for [Jekyll](jekyllrb.com).
+This is my personal blog modified from [Microdust](https://github.com/Azeril/azeril.github.io) which is based on  [Clean Blog theme by Start Bootstrap](https://github.com/BlackrockDigital/startbootstrap-clean-blog-jekyll). The theme is designed for [Jekyll](https://jekyllrb.com).
 
 ## The main changes are shown as follows.
 
@@ -13,6 +13,11 @@ This is my personal blog modified from [Microdust](https://github.com/Azeril/aze
 
 1. First, you should know some basics. Here is a guide [Creating and Hosting a Personal Site on GitHub](http://jmcglone.com/guides/github-pages/). It shows brief description of [Git](git-scm.com), [GitHub](github.com), [GitHub Pages](https://pages.github.com/) and [Jekyll](jekyllrb.com).
 2. Then follow the guide to creat your first blog. Though simple, it is really useful for you to understand Jekyll.
-3. After that, you have known how to creat a site on github online, but this is not enough. Then you need to [install Jekyll](https://jekyllrb.com/docs/quickstart/) on your pc in order to view your blog in real-time.
-4. To perform this blog on pc you also need to install *jekyll-gallery-generator* and *jekyll-paginate* by gem. Before that you should install *libmagickwand-dev* and *imagemagick* by apt-get or yum depending on you linux distribution.
-5. Finally, delete the repository you created for test, then fork this repository and rename to your own username. Clone and modify it as you want. Enjoy it!
+3. After that, you have known how to creat a site on github online, but this is not enough. Then you need to [install Jekyll](https://jekyllrb.com/docs/quickstart/) on your pc in order to view your blog in real-time. To perform this blog on pc you also need to install *jekyll-gallery-generator* and *jekyll-paginate* by gem. Before that you should install *libmagickwand-dev* and *imagemagick* by apt-get or yum depending on you linux distribution.
+
+Or, you can use commands as follows:
+	`sudo apt-get install ruby ruby-dev libmagickwand-dev imagemagick`
+	`gem sources --add https://ruby.taobao.org/ --remove https://rubygems.org/` 
+		* *This command is needed for Chinese users.*
+	`sudo gem install jekyll jekyll-gallery-generator jekyll-paginate`
+4. Finally, delete the repository you created for test, then fork this repository and rename to your own username. Clone and modify it as you want. Enjoy it!

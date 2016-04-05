@@ -14,8 +14,8 @@ owner:
   bio: " "
 
 # Data
-gavatar: img/head.png
-favicon: img/favicon.ico
+gavatar: /img/head.png
+favicon: /img/favicon.ico
 
 twitter_username: feihen1991 
 github_username: nuaa-wangj  
@@ -36,6 +36,7 @@ gems:
 - jekyll-paginate
 permalink: none
 paginate: 8
+paginate_path: "/pages/page:num/"
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
