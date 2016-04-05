@@ -20,7 +20,7 @@ This is my personal blog modified from [Microdust](https://github.com/Azeril/aze
 	`sudo apt-get install ruby ruby-dev libmagickwand-dev imagemagick`
 
 	`gem sources --add https://ruby.taobao.org/ --remove https://rubygems.org/`
-		* *This command is needed for Chinese users.*
+		(*This command is needed for Chinese users.*)
 
 	`sudo gem install jekyll jekyll-gallery-generator jekyll-paginate`
 
