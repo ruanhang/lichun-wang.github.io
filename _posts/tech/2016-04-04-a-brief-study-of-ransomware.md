@@ -65,39 +65,31 @@ header-img: "img/pages/template.jpg"
 近期恶意软件十分猖獗，出现了大量的恶意勒索软件变种，下面仅对部分进行罗列，并给出相关报道，如希望详细了解，可以自行网络检索。
 
 1. **Locky**
-
   * McAfee （迈克菲）: [Locky Ransomware Arrives via Email Attachment](https://blogs.mcafee.com/mcafee-labs/locky-ransomware-arrives-via-email-attachment/) 2016.03.11
   * Avast （爱维士）: [A closer look at the Locky ransomware](https://blog.avast.com/a-closer-look-at-the-locky-ransomware) 2016.03.10
   * Avira （小红伞）: [Locky ransomware is dead, long live Locky](http://blog.avira.com/locky-ransomware-is-dead-long-live-locky) 2016.03.01
 
 2. **CTB-Locker （Web服务器版本）**
-
   * Securelist （卡巴斯基实验室）: [CTB-Locker is back: the web server edition](https://securelist.com/blog/research/73989/ctb-locker-is-back-the-web-server-edition/) 2016.03.01
 
 3. **Cerber**
-
   * Malwarebytes Labs: [Cerber Ransomware - New, But Mature](https://blog.malwarebytes.org/threat-analysis/2016/03/cerber-ransomware-new-but-mature/) 2016.03.11
 
 4. **Petya （破坏文件系统的主引导分区MBR和主文件表MFT）**
-
   * G Data : [Randomeware Petya - a technical review](https://blog.gdatasoftware.com/2016/03/28226-ransomware-petya-a-technical-review) 2016.03.31
   * Bleeping Computer: [Petya Ransomware skips the Files and Encrypts your Hard Drive Instead](http://www.bleepingcomputer.com/news/security/petya-ransomware-skips-the-files-and-encrypts-your-hard-drive-instead/) 2016.03.25
 
 5. **LeChiffre**
-
   * Malwarebytes Labs: [LeChiffre, Ransomware Ran Manually](https://blog.malwarebytes.org/threat-analysis/2016/01/lechiffre-a-manually-run-ransomware/) 2016.01.22
   * McAfee （迈克菲）: [McAfee Labs Unlocks LeChiffre Ransomware](https://blogs.mcafee.com/mcafee-labs/mcafee-labs-unlocks-lechiffre-ransomware/) 2016.03.28
 
 6. **Maktub Locker （美丽又危险的勒索软件）**
-
   * Malwarebytes Labs: [Maktub Locker - Beautiful And Dangerous ](https://blog.malwarebytes.org/threat-analysis/2016/03/maktub-locker-beautiful-and-dangerous/) 2016.03.24
 
 7. **TeslaCrypt**
-
   * Fortinet: [Nemucod Adds Ransomware Routine](http://blog.fortinet.com/post/nemucod-adds-ransomware-routine) 2016.03.16
 
 8. **Criakl**
-
   * Phishme: [Ransomware Rising – Criakl, OSX, and others – PhishMe Tracks Down Hackers, Identifies Them and Provides Timeline of Internet Activities](http://phishme.com/ransomware-rising-criakl-osx-others/) 2016.03.10
 
 ## 防御方法 ##
