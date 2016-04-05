@@ -20,8 +20,8 @@ This is my personal blog modified from [Microdust](https://github.com/Azeril/aze
 	`sudo apt-get install ruby ruby-dev libmagickwand-dev imagemagick`
 
 	`gem sources --add https://ruby.taobao.org/ --remove https://rubygems.org/`
- 
 		* *This command is needed for Chinese users.*
+
 	`sudo gem install jekyll jekyll-gallery-generator jekyll-paginate`
 
 4. Finally, delete the repository you created for test, then fork this repository and rename to your own username. Clone and modify it as you want. Enjoy it!
