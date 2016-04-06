@@ -4,7 +4,7 @@ title:  "恶意勒索软件初探"
 category: [tech ]
 tags: [ransomware,]
 description: 简单分析和对比近期出现的恶意勒索软件
-header-img: "img/pages/template.jpg"
+header-img: "img/blogs/blog-ransomware.jpg"
 ---
 
 
