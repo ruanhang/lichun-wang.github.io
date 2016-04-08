@@ -17,5 +17,5 @@ header-img: "img/pages/template.jpg"
 
 该内容纯属娱乐～其中的病句与图片中的错误就当做我现在文字水平的见证吧。
 <center>
-    <p><img src="https://raw.githubusercontent.com/nuaa-wangj/nuaa-wangj.github.io/master/img/blogs/blog-invitation-20160329.jpg" align="center"></p>
+    <p><img src="http://7xsbrq.com1.z0.glb.clouddn.com/img/blogs/blog-invitation-20160329.jpg" align="center"></p>
 </center>

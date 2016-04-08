@@ -56,6 +56,8 @@ defaults:
       author: "Flight Tracer"
       header-img: "img/pages/template.jpg" # We don't want posts without a header image, that whould mean white on white
 
+# remote images repository powered by qiniu
+imageurl: http://7xsbrq.com1.z0.glb.clouddn.com
 
 # Comments 
 comments :
