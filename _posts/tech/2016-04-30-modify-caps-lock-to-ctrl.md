@@ -77,7 +77,7 @@ keycode 66 = Control_L Caps_Lock NoSymbol Nosymbol
 $ xmodmap ~/.Xmodmap
 ~~~
 
-或使用xmodmap说明文档中的例子,将Caps Lock键于与Control键交换：
+或使用xmodmap说明文档中的例子,将Caps Lock键与Control键交换：
 
 ~~~
 remove Lock = Caps_Lock
@@ -103,5 +103,5 @@ setxkbmap -option ctrl:swapcaps
 setxkbmap -option ctrl:nocaps
 ~~~
 
-**建议使用文件头给出的方法，简单有效。**
+**建议使用文章头给出的方法，简单有效。**
 
