@@ -4,7 +4,7 @@ title:  "Ubuntu中将Caps Lock键替换为Ctrl键"
 category: [tech ]
 tags: [Linux, Ubuntu, ]
 description: 将Caps Lock键替换为Ctrl键！
-header-img: "img/blogs/blog-linux-ubuntu.jpg"
+header-img: "img/blogs/blog-linux-ubuntu-capslock.jpg"
 ---
 
 
