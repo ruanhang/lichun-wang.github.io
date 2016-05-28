@@ -19,7 +19,8 @@ This is my personal blog modified from [Microdust](https://github.com/Azeril/aze
 
 	`sudo apt-get install ruby ruby-dev libmagickwand-dev imagemagick`
 
-	~~`gem sources --add https://ruby.taobao.org/ --remove https://rubygems.org/`~~ **(ruby.taobao.org is no longer maintained.)**
+	~~`gem sources --add https://ruby.taobao.org/ --remove https://rubygems.org/`~~ *(ruby.taobao.org is no longer maintained.)*
+	
 	`gem sources --add https://ruby-china.org/ --remove https://rubygems.org/`
 		(*This command is needed for Chinese users.*)
 
