@@ -21,7 +21,7 @@ This is my personal blog modified from [Microdust](https://github.com/Azeril/aze
 
 	~~`gem sources --add https://ruby.taobao.org/ --remove https://rubygems.org/`~~ *(ruby.taobao.org is no longer maintained.)*
 	
-	`gem sources --add https://ruby-china.org/ --remove https://rubygems.org/`
+	`gem sources --add https://gems.ruby-china.org/ --remove https://rubygems.org/`
 		(*This command is needed for Chinese users.*)
 
 	`sudo gem install jekyll jekyll-gallery-generator jekyll-paginate`
