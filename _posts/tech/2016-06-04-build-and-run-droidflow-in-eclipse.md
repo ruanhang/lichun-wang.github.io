@@ -1,16 +1,16 @@
- ---
+---
 layout: post
 title:  "FlowDroid通过源码构建运行"
 category: [tech ]
 tags: [Android,]
-description: Ubuntu中通过源代码构建FlowDroid并分析Android软件。
+description: Ubuntu中通过源代码构建FlowDroid并分析Android软件
 header-img: "img/pages/template.jpg"
 ---
 
 
 
 ----
->最近在研究Android软件的静态分析，[FlowDroid](https://blogs.uni-paderborn.de/sse/tools/flowdroid/)是一个高精度的Android程序污点分析工具，能够分析apk文件，生成软件调用图。下面给出了FlowDroid通过源码进行构建和运行的过程。
+> 最近在研究Android软件的静态分析，[FlowDroid](https://blogs.uni-paderborn.de/sse/tools/flowdroid/)是一个高精度的Android程序污点分析工具，能够分析apk文件，生成软件调用图。下面给出了FlowDroid通过源码进行构建和运行的过程。
 
 ## 安装相关软件 #
 
