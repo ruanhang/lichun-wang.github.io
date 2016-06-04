@@ -13,7 +13,7 @@ header-img: "img/pages/template.jpg"
 
 ## 1. 安装相关软件 ##
 
-#### 安装JDK 1.7，并移除JDK 1.6（FlowDroid不能再JDK 1.6下运行） ####
+#### 安装JDK 1.7，并移除JDK 1.6（FlowDroid不能在JDK 1.6下运行） ####
 ~~~ shell
 sudo apt-get install openjdk-7-jdk openjdk-7-jre-headless 
 sudo apt-get remove openjdk-6-jre openjdk-6-jre-headless  #（如果有的话）
