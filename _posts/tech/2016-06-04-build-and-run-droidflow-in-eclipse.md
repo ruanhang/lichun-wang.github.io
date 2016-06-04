@@ -13,9 +13,8 @@ header-img: "img/pages/template.jpg"
 
 ## 安装相关软件 #
 
-1. **JDK 1.7，并移除JDK 1.6（FlowDroid不能再JDK 1.6下运行**）
- （如果有必要先运行`sudo apt-get update`）
- 
+1. **JDK 1.7，并移除JDK 1.6（FlowDroid不能再JDK 1.6下运行）**
+
 ~~~
 sudo apt-get install openjdk-7-jdk openjdk-7-jre-headless 
 sudo apt-get remove openjdk-6-jre openjdk-6-jre-headless  #（如果有的话）
@@ -65,19 +64,13 @@ export DROIDBENCH=path/to/droidbench
 2. **其他配置**
   * **SLF4J文件重复问题**
   在项目`heros`和`soot-infoflow`两个项目中的classpath文件中均有`slf4j-simple-1.7.5.jar`。因此在项目编译时会提示SLF4J文件重复，解决方法是在`soot-infoflow`项目的`.classpath`文件中删除对应行`<classpathentry kind="lib" path="lib/slf4j-simple-1.7.5.jar"/>`。
-
   * **无法找到`EasyTaintWrapperSource.txt`**
   `soot-infoflow-anadroid`项目编译时提示找不到文件`EasyTaintWrapperSource.txt`。该文件可在项目`soot-infoflow`根目录下找到，复制到`soot-infoflow-anadroid`的根目录下即可。
 
 ## 运行 #
 
 1. **使用代码中的测试用例**
- `soot-infoflow-anadroid`项目提供了3个测试集，位于项目`test`文件夹下，分别为:
-  * droidBench数据集测试
-  * insecureBank.apk测试
-  * otherAPKs测试
-  
- 使用方法为，右击对应的java文件，选择Run As -> JUnit Test。
+ `soot-infoflow-anadroid`项目提供了3个测试集，位于项目`test`文件夹下，分别为:droidBench数据集测试、insecureBank.apk测试和otherAPKs测试。使用方法为，右击对应的java文件，选择Run As -> JUnit Test。
 
 2. **分析自定义文件**
  分析自定义文件使用`soot.jimple.infoflow.android.TestApps`中的`Test.java`文件。该文件的输入包括两个参数：apk-file和android-jar-directory。配置方法如下：
