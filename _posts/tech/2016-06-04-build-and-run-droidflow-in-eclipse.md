@@ -14,15 +14,15 @@ header-img: "img/pages/template.jpg"
 ## 安装相关软件 #
 
 1. **JDK 1.7，并移除JDK 1.6（FlowDroid不能再JDK 1.6下运行）**
-~~~ shell
+
 sudo apt-get install openjdk-7-jdk openjdk-7-jre-headless 
 sudo apt-get remove openjdk-6-jre openjdk-6-jre-headless  #（如果有的话）
-~~~
+
 
 2. **安装Eclipse、Git和相关插件**
-~~~ shell
+
 sudo apt-get install eclipse git eclipse-egit
-~~~
+
 
 ## 导入Eclipse #
 
@@ -48,7 +48,7 @@ sudo apt-get install eclipse git eclipse-egit
 
 ## 配置 #
 
-1. **环境变量**
+1.**环境变量**
 FlowDroid在运行其测试程序时，需要用到两个环境变量：`ANDROID_JARS`和`DROIDBENCH`。
 Ubuntu中可在~/.profile中设置相应的环境变量。使用`gedit ~/.profile`命令编辑，添加如下内容：
 
@@ -59,10 +59,9 @@ export DROIDBENCH=path/to/droidbench
 
 `DROIDBENCH`指向数据集所在的位置，本地中可在`soot-infoflow-android/test/soot/jimple/infoflow/android/test/droidBench`中找到，或者在其官方项目[DroidBench](https://github.com/secure-software-engineering/DroidBench)中下载。
 
-2. **其他配置**
+2.**其他配置**
   * **SLF4J文件重复问题**
   在项目`heros`和`soot-infoflow`两个项目中的classpath文件中均有`slf4j-simple-1.7.5.jar`。因此在项目编译时会提示SLF4J文件重复，解决方法是在`soot-infoflow`项目的`.classpath`文件中删除对应行`<classpathentry kind="lib" path="lib/slf4j-simple-1.7.5.jar"/>`。
-
   * **无法找到`EasyTaintWrapperSource.txt`**
   `soot-infoflow-anadroid`项目编译时提示找不到文件`EasyTaintWrapperSource.txt`。该文件可在项目`soot-infoflow`根目录下找到，复制到`soot-infoflow-anadroid`的根目录下即可。
 
