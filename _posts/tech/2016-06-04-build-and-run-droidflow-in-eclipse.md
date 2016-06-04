@@ -14,15 +14,13 @@ header-img: "img/pages/template.jpg"
 ## 安装相关软件 #
 
 1. **JDK 1.7，并移除JDK 1.6（FlowDroid不能再JDK 1.6下运行）**
-
-~~~
+~~~ shell
 sudo apt-get install openjdk-7-jdk openjdk-7-jre-headless 
 sudo apt-get remove openjdk-6-jre openjdk-6-jre-headless  #（如果有的话）
 ~~~
 
 2. **安装Eclipse、Git和相关插件**
-
-~~~
+~~~ shell
 sudo apt-get install eclipse git eclipse-egit
 ~~~
 
@@ -46,13 +44,11 @@ sudo apt-get install eclipse git eclipse-egit
 ## 下载依赖文件 #
 
 * **android.jar 文件**
-
 对于Android开发人员来说，该文件很熟悉，在android sdk文件夹下，文件结构通常为sdk/platforms/android-22/android.jar。如果本地没有，可在官方下载[Android SDK](https://developer.android.com/sdk/index.html)，或者移步在我的项目中[下载](https://github.com/traceflight/Android-related-repo/tree/master/Android%20Jars)。
 
 ## 配置 #
 
 1. **环境变量**
-
 FlowDroid在运行其测试程序时，需要用到两个环境变量：`ANDROID_JARS`和`DROIDBENCH`。
 Ubuntu中可在~/.profile中设置相应的环境变量。使用`gedit ~/.profile`命令编辑，添加如下内容：
 
@@ -64,23 +60,18 @@ export DROIDBENCH=path/to/droidbench
 `DROIDBENCH`指向数据集所在的位置，本地中可在`soot-infoflow-android/test/soot/jimple/infoflow/android/test/droidBench`中找到，或者在其官方项目[DroidBench](https://github.com/secure-software-engineering/DroidBench)中下载。
 
 2. **其他配置**
-
   * **SLF4J文件重复问题**
-
   在项目`heros`和`soot-infoflow`两个项目中的classpath文件中均有`slf4j-simple-1.7.5.jar`。因此在项目编译时会提示SLF4J文件重复，解决方法是在`soot-infoflow`项目的`.classpath`文件中删除对应行`<classpathentry kind="lib" path="lib/slf4j-simple-1.7.5.jar"/>`。
 
   * **无法找到`EasyTaintWrapperSource.txt`**
-
   `soot-infoflow-anadroid`项目编译时提示找不到文件`EasyTaintWrapperSource.txt`。该文件可在项目`soot-infoflow`根目录下找到，复制到`soot-infoflow-anadroid`的根目录下即可。
 
 ## 运行 #
 
 1. **使用代码中的测试用例**
-
  `soot-infoflow-anadroid`项目提供了3个测试集，位于项目`test`文件夹下，分别为:droidBench数据集测试、insecureBank.apk测试和otherAPKs测试。使用方法为，右击对应的java文件，选择Run As -> JUnit Test。
 
 2. **分析自定义文件**
-
  分析自定义文件使用`soot.jimple.infoflow.android.TestApps`中的`Test.java`文件。该文件的输入包括两个参数：apk-file和android-jar-directory。配置方法如下：
 
   * 右击Test.java文件，选择Run As -> Run Configurations...
