@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "FlowDroid通过源码构建运行"
+title:  "通过源码构建运行FlowDroid"
 category: [tech ]
 tags: [Android,]
 description: Ubuntu中通过源代码构建FlowDroid并分析Android软件
