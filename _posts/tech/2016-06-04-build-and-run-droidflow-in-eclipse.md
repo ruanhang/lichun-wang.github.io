@@ -15,7 +15,6 @@ header-img: "img/pages/template.jpg"
 ## 安装相关软件 #
 
 1. **JDK 1.7，并移除JDK 1.6（FlowDroid不能再JDK 1.6下运行**） 
-
 （如果有必要先运行`sudo apt-get update`）
 ~~~
  sudo apt-get install openjdk-7-jdk openjdk-7-jre-headless 
@@ -23,7 +22,6 @@ header-img: "img/pages/template.jpg"
 ~~~
 
 2. **安装Eclipse、Git和相关插件**
-
 ~~~
  sudo apt-get install eclipse git eclipse-egit
 ~~~
@@ -63,7 +61,6 @@ export DROIDBENCH=path/to/droidbench
 `DROIDBENCH`指向数据集所在的位置，本地中可在`soot-infoflow-android/test/soot/jimple/infoflow/android/test/droidBench`中找到，或者在其官方项目[DroidBench](https://github.com/secure-software-engineering/DroidBench)中下载。
 
 2. **其他配置**
-
 * SLF4J文件重复问题
 在项目`heros`和`soot-infoflow`两个项目中的classpath文件中均有`slf4j-simple-1.7.5.jar`。因此在项目编译时会提示SLF4J文件重复，解决方法是在`soot-infoflow`项目的`.classpath`文件中删除对应行`<classpathentry kind="lib" path="lib/slf4j-simple-1.7.5.jar"/>`。
 
@@ -73,7 +70,6 @@ export DROIDBENCH=path/to/droidbench
 ## 运行 #
 
 1. **使用代码中的测试用例**
-
 `soot-infoflow-anadroid`项目提供了3个测试集，位于项目`test`文件夹下，分别为:
 
 * droidBench数据集测试
@@ -83,7 +79,6 @@ export DROIDBENCH=path/to/droidbench
 使用方法为，右击对应的java文件，选择Run As -> JUnit Test。
 
 2. **分析自定义文件**
-
 分析自定义文件使用`soot.jimple.infoflow.android.TestApps`中的`Test.java`文件。该文件的输入包括两个参数：apk-file和android-jar-directory。配制方法如下：
 右击Test.java文件，选择Run As -> Run Configurations...
 ![flowdroid-test-config](http://7xsbrq.com1.z0.glb.clouddn.com/img/blogs/blog-flowdroid-test-config.png)
