@@ -11,9 +11,9 @@ header-img: "img/pages/template.jpg"
 ----
 > 最近在研究Android软件的静态分析，[FlowDroid](https://blogs.uni-paderborn.de/sse/tools/flowdroid/)是一个高精度的Android程序污点分析工具，能够分析apk文件，生成软件调用图。下面给出了FlowDroid通过源码进行构建和运行的过程。
 
-## 安装相关软件 ##
+1. ## 安装相关软件 ##
 
-#### JDK 1.7，并移除JDK 1.6（FlowDroid不能再JDK 1.6下运行） ####
+#### 安装JDK 1.7，并移除JDK 1.6（FlowDroid不能再JDK 1.6下运行） ####
 ~~~ shell
 sudo apt-get install openjdk-7-jdk openjdk-7-jre-headless 
 sudo apt-get remove openjdk-6-jre openjdk-6-jre-headless  #（如果有的话）
@@ -24,7 +24,7 @@ sudo apt-get remove openjdk-6-jre openjdk-6-jre-headless  #（如果有的话）
 sudo apt-get install eclipse git eclipse-egit
 ~~~
 
-## 导入Eclipse #
+2. ## 导入Eclipse #
 
 可分别下载5个项目放在一个目录下，并导入Eclipse，或者使用下面的方法通过项目集导入。
 
@@ -41,12 +41,12 @@ sudo apt-get install eclipse git eclipse-egit
 ![flowdroid-cloning](http://7xsbrq.com1.z0.glb.clouddn.com/img/blogs/blog-flowdroid-cloning.png)
 
 
-## 下载依赖文件 #
+3. ## 下载依赖文件 #
 
 #### android.jar 文件 ####
 对于Android开发人员来说，该文件很熟悉，在android sdk文件夹下，文件结构通常为sdk/platforms/android-22/android.jar。如果本地没有，可在官方下载[Android SDK](https://developer.android.com/sdk/index.html)，或者移步在我的项目中[下载](https://github.com/traceflight/Android-related-repo/tree/master/Android%20Jars)。
 
-## 配置 #
+4. ## 配置 #
 
 #### 环境变量 ####
 FlowDroid在运行其测试程序时，需要用到两个环境变量：`ANDROID_JARS`和`DROIDBENCH`。
@@ -65,7 +65,7 @@ export DROIDBENCH=path/to/droidbench
   * **无法找到`EasyTaintWrapperSource.txt`**
   `soot-infoflow-anadroid`项目编译时提示找不到文件`EasyTaintWrapperSource.txt`。该文件可在项目`soot-infoflow`根目录下找到，复制到`soot-infoflow-anadroid`的根目录下即可。
 
-## 运行 #
+5. ## 运行 #
 
 #### 使用代码中的测试用例 ####
  `soot-infoflow-anadroid`项目提供了3个测试集，位于项目`test`文件夹下，分别为:droidBench数据集测试、insecureBank.apk测试和otherAPKs测试。使用方法为，右击对应的java文件，选择Run As -> JUnit Test。
