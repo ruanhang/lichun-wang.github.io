@@ -68,7 +68,7 @@ export DROIDBENCH=path/to/droidbench
 ## 5. 运行FlowDroid分析软件 #
 
 #### 使用代码中的测试用例 ####
- `soot-infoflow-anadroid`项目提供了3个测试集，位于项目`test`文件夹下，分别为:droidBench数据集测试、insecureBank.apk测试和otherAPKs测试。使用方法为，右击对应的java文件，选择Run As -> JUnit Test。
+ `soot-infoflow-anadroid`项目提供了多个测试集，位于项目`test`文件夹下，分别为:droidBench数据集测试、insecureBank.apk测试、otherAPKs测试、sourceToSinks测试和xmlParser测试。使用方法为，右击对应的java文件，选择Run As -> JUnit Test。
 
 #### 分析自定义文件 ####
  分析自定义文件使用`soot.jimple.infoflow.android.TestApps`中的`Test.java`文件。该文件的输入包括两个参数：apk-file和android-jar-directory。配置方法如下：
