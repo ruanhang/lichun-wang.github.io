@@ -46,6 +46,9 @@ sudo apt-get install eclipse git eclipse-egit
 #### android.jar 文件 ####
 对于Android开发人员来说，该文件很熟悉，在android sdk文件夹下，文件结构通常为sdk/platforms/android-22/android.jar。如果本地没有，可在官方下载[Android SDK](https://developer.android.com/sdk/index.html)，或者移步在我的项目中[下载](https://github.com/traceflight/Android-related-repo/tree/master/Android%20Jars)。
 
+#### DroidBench数据集 ####
+[DroidBench](https://github.com/secure-software-engineering/DroidBench)是用于评估Android软件污点分析工具有效性的开源测试集，由[EC SPRIDE Secure Software Engineering Group](http://sse.ec-spride.de/)创建并维护。FlowDroid中的测试代码部分使用到了DROIDBENCH环境变量，在分析自定义软件时不需要该变量。因此，该数据集不是运行FlowDroid的必须文件。如果需要，可在其Github项目[DroidBench](https://github.com/secure-software-engineering/DroidBench)中下载。
+
 ## 4. 配置项目 #
 
 #### 环境变量 ####
@@ -75,6 +78,6 @@ export DROIDBENCH=path/to/droidbench
 
   * 右击Test.java文件，选择Run As -> Run Configurations...
   ![flowdroid-test-config](http://7xsbrq.com1.z0.glb.clouddn.com/img/blogs/blog-flowdroid-test-config.png)
-  * 左侧选择Java Application里面的Test，右侧选择Arguments标签，里面写入两个参数，点击Apply、Run，即可得到分析结果。
+  * 左侧选择Java Application里面的Test（如果打开Configurations后，左侧没有Test，可先执行Run As -> Java Application），右侧选择Arguments标签，里面写入两个参数，点击Apply、Run，即可得到分析结果。
   ![flowdroid-test-run](http://7xsbrq.com1.z0.glb.clouddn.com/img/blogs/blog-flowdroid-test-run.png)
   ![flowdroid-test-result](http://7xsbrq.com1.z0.glb.clouddn.com/img/blogs/blog-flowdroid-test-result.png)
