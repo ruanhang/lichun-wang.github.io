@@ -60,7 +60,8 @@ export ANDROID_JARS=path/to/android.jar
 export DROIDBENCH=path/to/droidbench
 ~~~
 
-`DROIDBENCH`指向数据集所在的位置，本地中可在`soot-infoflow-android/test/soot/jimple/infoflow/android/test/droidBench`中找到，或者在其官方项目[DroidBench](https://github.com/secure-software-engineering/DroidBench)中下载。
+`ANDROID_JARS`指向Android SDK中某一版本的android.jar文件。
+`DROIDBENCH`指向数据集所在的位置，本地中可在`soot-infoflow-android/test/soot/jimple/infoflow/android/test/droidBench`中找到，但其中的数据集不完整，无法完成所有的测试用例。完整的数据集在其官方项目[DroidBench](https://github.com/secure-software-engineering/DroidBench)中下载。
 
 #### 其他配置 ####
   * **SLF4J文件重复问题**
