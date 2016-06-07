@@ -38,7 +38,8 @@ mkdir -p ~/workspace/flowdroid
 cd ~/workspace/flowdroid
 ~~~
 
-**在GitHub中clone项目到本地**  
+**在GitHub中clone项目到本地**
+
 ~~~ shell
 git clone https://github.com/Sable/heros.git
 git clone https://github.com/Sable/jasmin.git
