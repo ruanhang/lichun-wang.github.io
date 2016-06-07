@@ -26,13 +26,36 @@ sudo apt-get install eclipse git eclipse-egit
 
 ## 2. 导入Eclipse #
 
-可分别下载5个项目放在一个目录下，并导入Eclipse，或者使用下面的方法通过项目集导入。
+下面介绍两种将FlowDroid导入Eclipse的方法。
+
+#### 手动下载项目 ####
+
+1. 创建文件夹。
+本地创建文件夹，用于存放项目代码。
+~~~ shell
+mkdir -p ~/workspace/flowdroid
+cd ~/workspace/flowdroid
+~~~
+
+2. 在GitHub中clone项目到本地
+~~~ shell
+git clone https://github.com/Sable/heros.git
+git clone https://github.com/Sable/jasmin.git
+git clone https://github.com/Sable/soot.git
+git clone https://github.com/secure-software-engineering/soot-infoflow.git
+git clone https://github.com/secure-software-engineering/soot-infoflow-android.git
+~~~
+
+3. 导入Eclipse
+打开Eclipse选择 File -> Import -> General -> Existing Projects into Workspace，分别导入5个项目即可。
+
+#### 通过psf项目集导入 ####
 
 在Eclipse中使用URI导入团队项目集，能够一次性将5个项目同时导入到Eclipse中。5个项目包括：[`heros`](https://github.com/Sable/heros.git)、[`jasmin`](https://github.com/Sable/jasmin.git)、[`soot`](https://github.com/Sable/soot.git)、[`soot-infoflow`](https://github.com/secure-software-engineering/soot-infoflow.git)、[`soot-infoflow-android`](https://github.com/secure-software-engineering/soot-infoflow-android.git)。具体导入方法见下面截图：
 
 **URI： [https://raw.githubusercontent.com/traceflight/Droidetect/master/develop/flowdroid.psf](https://raw.githubusercontent.com/traceflight/Droidetect/master/develop/flowdroid.psf)**
 
-1. **打开 Filt -> Import -> Team -> Team Project Set**
+1. **打开 File -> Import -> Team -> Team Project Set**
 ![flowdroid-import](http://7xsbrq.com1.z0.glb.clouddn.com/img/blogs/blog-flowdroid-import.png)
 ![flowdroid-team-project-set](http://7xsbrq.com1.z0.glb.clouddn.com/img/blogs/blog-flowdroid-team-project-set.png)
 
