@@ -30,14 +30,14 @@ sudo apt-get install eclipse git eclipse-egit
 
 #### 手动下载项目 ####
 
-1. 创建文件夹。
+##### 创建文件夹 #
 本地创建文件夹，用于存放项目代码。
 ~~~ shell
 mkdir -p ~/workspace/flowdroid
 cd ~/workspace/flowdroid
 ~~~
 
-2. 在GitHub中clone项目到本地
+##### 在GitHub中clone项目到本地 #
 ~~~ shell
 git clone https://github.com/Sable/heros.git
 git clone https://github.com/Sable/jasmin.git
@@ -46,7 +46,7 @@ git clone https://github.com/secure-software-engineering/soot-infoflow.git
 git clone https://github.com/secure-software-engineering/soot-infoflow-android.git
 ~~~
 
-3. 导入Eclipse
+##### 导入Eclipse #
 打开Eclipse选择 File -> Import -> General -> Existing Projects into Workspace，分别导入5个项目即可。
 
 #### 通过psf项目集导入 ####
