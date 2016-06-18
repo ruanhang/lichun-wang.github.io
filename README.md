@@ -62,4 +62,5 @@ This is my personal blog modified from [Microdust](https://github.com/Azeril/aze
 ## TODO ##
 
 * 现在文章的标题前面都会显示一个#，这个问题在[Microdust](https://github.com/Azeril/azeril.github.io) 中也存在，但是在[Clean Blog theme by Start Bootstrap](https://github.com/BlackrockDigital/startbootstrap-clean-blog-jekyll)中不存在，因此可以对比两个项目，查出问题所在。（一直没有时间做）
-* 
+* 各个分类文章上一篇和下一篇的按钮和提示。
+* 美化工作。
