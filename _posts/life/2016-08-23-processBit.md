@@ -6,13 +6,6 @@ tags: [android,dataset]
 description: C语言之位域操作
 header-img: "img/pages/template.jpg"
 ---
----
-layout: post
-title:  C语言之位域操作
-date:   2016-08-23
-author: LeoSpring
-category: Program
----
 
 ### 一、问题引入：  
 >存在一个问题，如果只给你一个字节的空间，但是程序中却有两个变量需要存储，但是变量的大小都在10以内，这个问题该如何解决呢？
