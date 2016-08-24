@@ -54,7 +54,7 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      author: "Flight Tracer"
+      author: "LeoSpring"
       header-img: "img/pages/template.jpg" # We don't want posts without a header image, that whould mean white on white
 
 # remote images repository powered by qiniu
