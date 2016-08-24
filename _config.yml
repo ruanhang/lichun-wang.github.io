@@ -1,7 +1,7 @@
 # Site settings
 title: Spring's Idea
 header-img: "img/pages/main.jpg"
-tagline: "飞痕"  
+tagline: "LeoSpring"  
 description: "众里寻他千百度，蓦然回首，那人却在灯火阑珊处"  
 baseurl: ""
 url: "http://wanglichun.tech"
@@ -10,19 +10,19 @@ url: "http://wanglichun.tech"
 
 # About/contact
 owner: 
-  name: "Flight Tracer"
-  email: traceflight@outlook.com
+  name: "LeoSpring"
+  email: lichun_wang1993@163.com
   bio: " "
 
 # Data
 gavatar: /img/head.png
 favicon: /img/favicon.ico
 
-twitter_username: feihen1991 
-github_username: traceflight  
-facebook_username: feihen1991  
-weibo_username: 飞恨  
-linkedin_username: 军-王-995426105
+twitter_username:  
+github_username: lichun-wang  
+facebook_username:   
+weibo_username: 春枫琰玉  
+linkedin_username: 
 
 # Build settings  
 # use Github Flavored Markdown !important  
