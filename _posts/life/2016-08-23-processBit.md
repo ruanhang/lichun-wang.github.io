@@ -1,5 +1,13 @@
 ---
 layout: post
+title:  "C语言之位域操作"
+category: [life ]
+tags: [android,dataset]
+description: C语言之位域操作
+header-img: "img/pages/template.jpg"
+---
+---
+layout: post
 title:  C语言之位域操作
 date:   2016-08-23
 author: LeoSpring
