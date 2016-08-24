@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "C语言之位域操作"
-category: [life ]
+category: [coding ]
 tags: [ccc,dataset]
 description: C语言之位域操作
 header-img: "img/pages/template.jpg"
