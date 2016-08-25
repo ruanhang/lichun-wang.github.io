@@ -7,15 +7,10 @@ header-img: "img/pages/about.jpg"
 
 # Keep Going.
 ---
+
 ##  Personal Infomation
 
-<<<<<<< HEAD
 >* LeoSpring
-=======
-##  Personal Infomation
-
-* LeoSpring
->>>>>>> origin/master
 * Nanjing University of Aeronautics and Astronautics,China
 * Computer Science Master's degree in reading
 * Digital Image Process
@@ -31,14 +26,8 @@ header-img: "img/pages/about.jpg"
 
 ---
 
-<<<<<<< HEAD
-##  Interests
-
->* Running , Aim to run 200km in this year.
-=======
 ## Interests
-* Running , Aim to run 200km in this year.
->>>>>>> origin/master
+>* Running , Aim to run 200km in this year.
 * Keeping Fit
 
 ---
