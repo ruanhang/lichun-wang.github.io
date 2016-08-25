@@ -34,7 +34,7 @@ header-img: "img/pages/about.jpg"
 
 ## Welcome to contact
 
->* WebSite：[www.wanglichun.tech](www.wanglichun.tech)
+>* WebSite：[www.wanglichun.tech](http://www.wanglichun.tech)
 * Email：[lichun_wang1993@163.com]()
 * GitHub:[http://github.com/lichun-wang](http://github.com/lichun-wang)
 * Sina Weibo：[春枫琰玉](http://weibo.com/p/1005052271697851/home?from=page_100505&mod=TAB&is_all=1#place)
