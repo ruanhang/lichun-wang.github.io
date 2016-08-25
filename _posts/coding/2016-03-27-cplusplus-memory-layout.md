@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "C/C++局部变量在栈区的存储情况分析"
-category: tech
-tags: [memory,stack,]
+category: coding
+tags: [c++,memory,stack]
 description:
 ---
 

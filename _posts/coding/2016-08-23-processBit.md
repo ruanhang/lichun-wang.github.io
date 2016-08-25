@@ -2,7 +2,7 @@
 layout: post
 title:  "C语言之位域操作"
 category: [coding ]
-tags: [ccc,dataset]
+tags: [c++]
 description: C语言之位域操作
 header-img: "img/pages/template.jpg"
 ---
