@@ -1,0 +1,9 @@
+---
+layout: post
+title:  "Loving Time"
+category: [life ]
+tags: [love]
+description: loving time
+header-img: "img/pages/life.jpg"
+---
+[爱的时光](\loving_time\loving_time.htm)
