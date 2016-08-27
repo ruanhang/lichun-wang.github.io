@@ -10,7 +10,7 @@ header-img: "img/pages/about.jpg"
 
 ##  Personal Infomation
 
->* LeoSpring
+>* 王立春（LeoSpring）
 * Nanjing University of Aeronautics and Astronautics,China
 * Computer Science Master's degree in reading
 * Digital Image Process
