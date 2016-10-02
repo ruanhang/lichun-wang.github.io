@@ -9,6 +9,7 @@ description:
 
 ---
 ## 问题1：如何在MFC控件中显示OpenCV读取的图像
+
 ---
 ### 1.1问题说明
 在做工程项目的时候遇到了这样一个问题，将用OpenCV读取的图像（Mat类型，或者IPlImage类型）显示在MFC的Picture控件中，那么将如何才能方便的显示呢？
@@ -101,6 +102,11 @@ description:
 
 截止目前，图像的显示已经基本实现了，但是到此运行之后你会发现一个奇妙的现象，内存泄漏。
 
+
+<center>
+    <p><img src="http://upload-images.jianshu.io/upload_images/2829844-f3386e5c30e079ad.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" align="center"></p>
+</center>
+
 <center>
 
 ![显示结果](https://github.com/lichun-wang/lichun-wang.github.io/tree/master/passageImages/result.jpg)
@@ -119,6 +125,11 @@ description:
 >** 工程-- 属性--  配置属性 --常规 --MFC的使用 选择静态库使用 **
 
 >到此，内存泄漏已经解决，但同时很可能出现另一个问题，程序崩溃。错误提示为 _pFirstBlock==pHead，如下图，此问题如下解决。
+
+<center>
+    <p><img src="(http://upload-images.jianshu.io/upload_images/2829844-b8e7facce8ff3353.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" align="center"></p>
+</center>
+
 
 <center>
 
