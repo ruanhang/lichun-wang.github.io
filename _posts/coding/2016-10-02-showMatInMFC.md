@@ -5,32 +5,31 @@ category: coding
 tags: [c++,OpenCV,MFC]
 description:
 ---
-
+---
 最近在做一个项目，需要在MFC中显示OpenCV读取的图像，遇到了一些问题，现在总结如下，希望对大家有帮助。
-
 ---
-## 问题1：如何在MFC控件中显示OpenCV读取的图像
-
+ ## 问题1：如何在MFC控件中显示OpenCV读取的图像
 ---
-### 1.1问题说明
+ ### 1.1问题说明
 在做工程项目的时候遇到了这样一个问题，将用OpenCV读取的图像（Mat类型，或者IPlImage类型）显示在MFC的Picture控件中，那么将如何才能方便的显示呢？
-### 1.2解决方法
+ ### 1.2解决方法
 经过研究发现如下两种方法：
 
 * 1、利用CvvImage类，可以方便的在MFC对应控件中显示图像，方法如下：
 首先，由于从OpenCV 2.2.0开始，OpenCV取消了CvvImage这个类，具体原因暂时不太清楚，所以导致OpenCV2.2后面的版本无法直接使用这个类，但是这个类对于MFC的显示确实非常的简单，所以为了继续使用这个类，我们可以下载CvvImage的源码，将CvvImage.cpp以及CvvImage.h添加到工程中去（注：CvvImage.cpp需要在开头加上预编译头文件 #include "stdafx.h" ）！[下载链接](http://download.csdn.net/detail/abc123abc_123/5721905)，添加到工程之后便可以利用CvvImage进行显示了。并且由于CopyOf后cimg空间不会自动回收，所以不要忘记手动释放内存。
+
 ~~~ C++
-    Mat mat = imread(filePath);
-    CDC* pDC = GetDlgItem( ID )->GetDC();
-    HDC hDC = pDC->GetSafeHdc();
-    IplImage img = mat;
-    CvvImage cimg;
-    cimg.CopyOf(&img);
-    CRect rect;
-    GetDlgItem( ID )->GetClientRect(&rect);
-    cimg.DrawToHDC(hDC, &rect);
-    cimg.Destroy();  //注意释放空间
-    ReleaseDC(pDC);     //释放
+       Mat mat = imread(filePath);
+       CDC* pDC = GetDlgItem( ID )->GetDC();
+       HDC hDC = pDC->GetSafeHdc();
+      IplImage img = mat;
+      CvvImage cimg;
+      cimg.CopyOf(&img);
+      CRect rect;
+      GetDlgItem( ID )->GetClientRect(&rect);
+      cimg.DrawToHDC(hDC, &rect);
+      cimg.Destroy();  //注意释放空间
+      ReleaseDC(pDC);     //释放
 ~~~
 
 * 2、利用c++以及windows系统函数进行显示,方法如下：
