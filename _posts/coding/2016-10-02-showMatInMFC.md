@@ -122,13 +122,9 @@ description:
 
 >经过查询发现出现内存泄漏的原因不是你代码有问题，而是MFC编译的问题，网上说，由于引入OpenCV库之后，OpenCV的链接库core.dll先与MFC的库文件生成，所以导致内存泄漏，解决方法是将MFC的动态编译该为静态编译，进行如下操作，在工程环境中依次选择：
 
->** 工程-- 属性--  配置属性 --常规 --MFC的使用 选择静态库使用 **
+> ** 工程-- 属性--  配置属性 --常规 --MFC的使用 选择静态库使用 **
 
-到此，内存泄漏已经解决，但同时很可能出现另一个问题，程序崩溃。错误提示为 _pFirstBlock==pHead，如下图，此问题如下解决。
-
-<center>
-    <p><img src="(http://upload-images.jianshu.io/upload_images/2829844-b8e7facce8ff3353.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" align="center"></p>
-</center>
+到此，内存泄漏已经解决，但同时很可能出现另一个问题，程序崩溃。错误提示为 _pFirstBlock==pHead，此问题如下解决。
 
 ---
 
