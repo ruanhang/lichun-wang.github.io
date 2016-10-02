@@ -103,7 +103,7 @@ description:
 
 <center>
 
-![显示结果](http://upload-images.jianshu.io/upload_images/2829844-f3386e5c30e079ad.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![显示结果](https://github.com/lichun-wang/lichun-wang.github.io/tree/master/passageImages/result.jpg)
 
 </center>
 
@@ -122,7 +122,7 @@ description:
 
 <center>
 
-![出现这样的bug](http://upload-images.jianshu.io/upload_images/2829844-b8e7facce8ff3353.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![出现这样的bug](https://github.com/lichun-wang/lichun-wang.github.io/tree/master/passageImages/bug.jpg)
 
 </center>
 
