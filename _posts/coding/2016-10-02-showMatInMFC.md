@@ -24,6 +24,7 @@ description:
  * 1、利用CvvImage类，可以方便的在MFC对应控件中显示图像，方法如下：
    >首先，由于从OpenCV 2.2.0开始，OpenCV取消了CvvImage这个类，具体原因暂时不太清楚，所以导致OpenCV2.2后面的版本无法直接使用这个类，但是这个类对于MFC的显示确实非常的简单，所以为了继续使用这个类，我们可以下载CvvImage的源码，将CvvImage.cpp以及CvvImage.h添加到工程中去（注：CvvImage.cpp需要在开头加上预编译头文件 #include "stdafx.h" ）！[下载链接](http://download.csdn.net/detail/abc123abc_123/5721905)，添加到工程之后便可以利用CvvImage进行显示了。并且由于CopyOf后cimg空间不会自动回收，所以不要忘记手动释放内存。
 
+~~~ C++
     Mat mat = imread(filePath);
     CDC* pDC = GetDlgItem( ID )->GetDC();
     HDC hDC = pDC->GetSafeHdc();
@@ -35,6 +36,7 @@ description:
     cimg.DrawToHDC(hDC, &rect);
     cimg.Destroy();  //注意释放空间
     ReleaseDC(pDC);     //释放
+~~~
 
  * 2、利用c++以及windows系统函数进行显示,方法如下：
      
@@ -112,11 +114,11 @@ description:
 
 ## 问题2：出现内存泄漏
 
-###2.1问题说明
+### 2.1问题说明
 
 >在显示实现的时候，明明没有自己new变量，为什么会出现内存泄漏呢？并且在进行调试后发现，在MFC工程中，只要定义了Mat，或者IPlImage变量，即使运行结束释放掉，仍然会出现内存泄漏，这是什么原因呢？
 
-###2.2解决方法
+### 2.2解决方法
 
 >经过查询发现出现内存泄漏的原因不是你代码有问题，而是MFC编译的问题，网上说，由于引入OpenCV库之后，OpenCV的链接库core.dll先与MFC的库文件生成，所以导致内存泄漏，解决方法是将MFC的动态编译该为静态编译，进行如下操作，在工程环境中依次选择：
 
@@ -131,11 +133,15 @@ description:
 ---
 
 ## 问题3：解决_pFirstBlock==pHead导致程序崩溃
-###3.1问题说明
+
+### 3.1问题说明
+
 >在问题2中内存泄漏的问题已经解决了，但是在进行开发的过程中，可能会发现程序崩溃的问题，特别是当程序比较庞大的时候更容易出现此问题，错误提示为：_pFirstBlock==pHead。
 
-###3.2解决方法
+### 3.2解决方法
+
 >此问题的产生多半是因为在调用库的过程中产生了冲突，所以解决此问题的方法就是将OpenCV的调用方法改为静态调用， **使用OpenCV的静态库**
+
 ### opencv中在静态库中使用MFC的配置方法如下：
 
 >* 1、lib选择staticlib；
