@@ -12,14 +12,14 @@ description:
 
 ---
 ### 1.1问题说明
+
 在做工程项目的时候遇到了这样一个问题，将用OpenCV读取的图像（Mat类型，或者IPlImage类型）显示在MFC的Picture控件中，那么将如何才能方便的显示呢？
+
 ### 1.2解决方法
+
 经过研究发现如下两种方法：
 
  * 1、利用CvvImage类，可以方便的在MFC对应控件中显示图像，方法如下：
-  
-
-  
    >首先，由于从OpenCV 2.2.0开始，OpenCV取消了CvvImage这个类，具体原因暂时不太清楚，所以导致OpenCV2.2后面的版本无法直接使用这个类，但是这个类对于MFC的显示确实非常的简单，所以为了继续使用这个类，我们可以下载CvvImage的源码，将CvvImage.cpp以及CvvImage.h添加到工程中去（注：CvvImage.cpp需要在开头加上预编译头文件 #include "stdafx.h" ）！[下载链接](http://download.csdn.net/detail/abc123abc_123/5721905)，添加到工程之后便可以利用CvvImage进行显示了。并且由于CopyOf后cimg空间不会自动回收，所以不要忘记手动释放内存。
    > 
     Mat mat = imread(filePath);
@@ -34,7 +34,7 @@ description:
     cimg.Destroy();  //注意释放空间
     ReleaseDC(pDC);     //释放
 
-  * 2、利用c++以及windows系统函数进行显示,方法如下：
+ * 2、利用c++以及windows系统函数进行显示,方法如下：
      
 >主要利用 StretchDIBits函数将图像数据显示到对应控件中，对于StretchDIBits具体含义，读者可以自行百度，这里给出显示函数代码以及主函数代码，注意在显示的时候，存在数据对其的问题，由于数据存储要求4字节对其，可能需要对显示的数据进行调整，int NewWidth = (width*(bit / 8) + 3) / 4 * 4，请读者注意。
 
@@ -117,7 +117,7 @@ description:
 
 >** 工程-- 属性--  配置属性 --常规 --MFC的使用 选择静态库使用 **
 
->到此，内存泄漏已经解决，但同时很可能出现另一个问题，程序崩溃。错误提示为 _pFirstBlock==pHead，如下图，此问题如下解决。
+到此，内存泄漏已经解决，但同时很可能出现另一个问题，程序崩溃。错误提示为 _pFirstBlock==pHead，如下图，此问题如下解决。
 
 <center>
     <p><img src="(http://upload-images.jianshu.io/upload_images/2829844-b8e7facce8ff3353.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" align="center"></p>
