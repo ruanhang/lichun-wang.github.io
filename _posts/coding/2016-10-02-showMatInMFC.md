@@ -22,6 +22,7 @@ description:
 经过研究发现如下两种方法：
 
  * 1、利用CvvImage类，可以方便的在MFC对应控件中显示图像，方法如下：
+ 
    >首先，由于从OpenCV 2.2.0开始，OpenCV取消了CvvImage这个类，具体原因暂时不太清楚，所以导致OpenCV2.2后面的版本无法直接使用这个类，但是这个类对于MFC的显示确实非常的简单，所以为了继续使用这个类，我们可以下载CvvImage的源码，将CvvImage.cpp以及CvvImage.h添加到工程中去（注：CvvImage.cpp需要在开头加上预编译头文件 #include "stdafx.h" ）！[下载链接](http://download.csdn.net/detail/abc123abc_123/5721905)，添加到工程之后便可以利用CvvImage进行显示了。并且由于CopyOf后cimg空间不会自动回收，所以不要忘记手动释放内存。
 
 ~~~ C++
