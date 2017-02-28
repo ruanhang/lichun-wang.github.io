@@ -9,7 +9,7 @@ description: LeetCode
 #### 第七题：  reverse integer
 >##### 题目概述：
 >**English：** Reverse digits of an integer.   
-**中文意思：** 将一个整型变量倒置，如将123变为321，将-123变为-321.
+ **中文意思：** 将一个整型变量倒置，如将123变为321，将-123变为-321.
  **Example1:** x = 123, return 321 
  **Example2:** x = -123, return -321
 
