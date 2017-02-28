@@ -3,39 +3,41 @@ layout: post
 title:  "MFCÏÂÊµÏÖ »Ò¶ÈÍ¼ÏñÏÔÊ¾º¯Êý´úÂë C++"
 category: coding
 tags: [c++,MFC,Í¼Ïñ´¦Àí]
-description:
+description: MFCÏÂÊµÏÖ »Ò¶ÈÍ¼ÏñÏÔÊ¾º¯Êý´úÂë C++
 ---  
 
 ---
+
 ### Ò»¡¢ÎÊÌâÃèÊö
  > Ê×ÏÈ£¬ÔÚ×öÍ¼Ïñ±à³ÌµÄ¹ý³ÌÖÐ£¬¶ÔÓÚÍ¼ÏñµÄÏÔÊ¾ÊÇ·Ç³£ÖØÒªµÄ£¬ÎÒÃÇ¶ÔÓÚÍ¼ÏñµÄ´¦Àí£¬¾­³£»áÓÃµ½Í¼ÏñµÄÏÔÊ¾£¬ÓÃÓÚ²é¿´½á¹ûÊÇ·ñÕýÈ·£¬ËùÒÔÎÒÃÇ×ÔÈ»»á²úÉúÒ»¸öÏë·¨£¬ÊÇ·ñ¿ÉÒÔ±àÐ´Ò»¸öÍ¼ÏñÏÔÊ¾µÄº¯Êý£¬ÀàËÆÓÚmatlab»òÕßopenCVÖÐµÄimshow()º¯Êý£¬¿ÉÒÔËæÊ±½«Í¼Ïñ´òÓ¡³öÀ´ÄØ£¿´ð°¸±ØÈ»ÊÇ¿Ï¶¨µÄ£¬ÔÚÕâÀï£¬ÎÒÃÇÔÚmfc»·¾³ÏÂÊµÏÖ×Ô¼ºµÄimshow()º¯Êý¡£²¢ÇÒÔÚmfc»·¾³ÏÂ£¬vc++ÎªÎÒÃÇÌá¹©ÁËºÜ¶à±ã½ÝµÄ½á¹¹ÌåºÍº¯Êý£¬Ê¹ÓÃÆðÀ´ºÜ·½±ã¡£
 
 ---
 
 ### ¶þ¡¢½â¾ö·½·¨
->ÏÔÊ¾Í¼Ïñ£¬ÎÒÃÇÖ÷ÒªÓÃµ½µÄº¯ÊýÊÇ**SetDIBitsToDevice()**;Õâ¸öº¯Êý£¬Õâ¸öº¯ÊýµÄ×÷ÓÃ±ãÊÇ½«Í¼ÏñÏÔÊ¾ÔÚÊä³öÏÔÊ¾Æ÷ÉÏÃæ£¬º¯ÊýµÄÏêÏ¸½éÉÜÔÚÕâÀïÎÒ±ã²»×öÏêÏ¸²ûÊöÁË£¬¶ÁÕß¿ÉÒÔ×ÔÐÐµÄ²é¿´°Ù¶È°Ù¿ÆÁ´½Ó£¨[http://baike.baidu.com/linkurl=D8WZ6hoanRGCSCrjCia5BKJli5saxSmdi8guNtlvrrlbUxy1BF52o5q1LwImvvHQ5gRCxZMfS0HdrF0C0kv4Q_](https://www.baidu.com/swd=SetDIBitsToDevice&rsv_spt=1&rsv_iqid=0x9b522a5b00009696&issp=1&f=8&rsv_bp=0&rsv_idx=2&ie=utf-8&tn=baiduhome_pg&rsv_enter=1&rsv_sug3=2&rsv_sug1=1&rsv_n=2)£©
+> ÏÔÊ¾Í¼Ïñ£¬ÎÒÃÇÖ÷ÒªÓÃµ½µÄº¯ÊýÊÇ**SetDIBitsToDevice()**;Õâ¸öº¯Êý£¬Õâ¸öº¯ÊýµÄ×÷ÓÃ±ãÊÇ½«Í¼ÏñÏÔÊ¾ÔÚÊä³öÏÔÊ¾Æ÷ÉÏÃæ£¬º¯ÊýµÄÏêÏ¸½éÉÜÔÚÕâÀïÎÒ±ã²»×öÏêÏ¸²ûÊöÁË£¬¶ÁÕß¿ÉÒÔ×ÔÐÐµÄ²é¿´°Ù¶È°Ù¿ÆÁ´½Ó£¨[http://baike.baidu.com/linkurl=D8WZ6hoanRGCSCrjCia5BKJli5saxSmdi8guNtlvrrlbUxy1BF52o5q1LwImvvHQ5gRCxZMfS0HdrF0C0kv4Q_](https://www.baidu.com/swd=SetDIBitsToDevice&rsv_spt=1&rsv_iqid=0x9b522a5b00009696&issp=1&f=8&rsv_bp=0&rsv_idx=2&ie=utf-8&tn=baiduhome_pg&rsv_enter=1&rsv_sug3=2&rsv_sug1=1&rsv_n=2)£©
 
 ### Èý¡¢Ö÷Òª½Ó¿Úº¯Êý½éÉÜ
 > ÕâÀïÖ÷Òª½éÉÜÒ»ÏÂº¯Êý¡£
    º¯ÊýÔ­ÐÍÎª£º
   int SetDIBitsToDevice(HDC hdc, int xDest, int Ydest, DWORD dwWidth, DWORD dwHeight, intXSrc, int Ysrc, UINT uStartScan, UINT cScanLines, CONST VOID *lpvBits, CONST BITMAPINFO *lpbmi, UINT fuColorUse)£»
-~~~
-²ÎÊý¶¨ÒåÈçÏÂ£º
- hdc£ºÉè±¸»·¾³¾ä±ú
-XDest, YDest £ºÏÔÊ¾ÔÚÆÁÄ»ÉÏÃæµÄ×óÉÏ½ÇµãµÄ×ø±ê¡£
-dwWidth£ºÍ¼Ïñ¿í¶È¡£
-dwHeight£ºÍ¼Ïñ¸ß¶È¡£
-XSrc £¬YSrc £º Í¼ÏñµÄÆðÊ¼×ø±ê £¬Ò»°ã´Ë´¦Îª 0 0 ¡£   /*ÆäÊµ, XSrc ,YSrc dwWidth dwHeight±ãÊÇ½«Í¼ÏñµÄ¾ØÐÎÈ·¶¨³öÀ´*/
-uStartScan£º Ö¸¶¨DIBÖÐµÄÆðÊ¼[É¨ÃèÏß]£¬´Ë´¦Ò»°ãÎª 0 ¡£
-cScanLInes£º Ö¸¶¨²ÎÊýlpvBitsÖ¸ÏòµÄÊý×éÖÐ°üº¬µÄDIBÉ¨ÃèÏßÊýÄ¿¡£  /*Ëµ°×ÁË¾ÍÊÇÍ¼ÏñµÄ¸ß¶È*/
-lpvBits£º Ö¸Ïò´æ´¢DIBÑÕÉ«Êý¾ÝµÄ×Ö½ÚÀàÐÍ[Êý×é]µÄÖ¸Õë¡£
-lpbmi£º Ö¸ÏòBITMAPINFO½á¹¹µÄÖ¸Õë£¬¸Ã½á¹¹°üº¬ÓÐ¹ØDIBµÄÐÅÏ¢¡£
-fuColorUse£º Ö¸ÏòBITMAPINFO½á¹¹ÖÐµÄ³ÉÔ±bmiColorsÊÇ·ñ°üº¬Ã÷È·µÄRGBÖµ»ò¶Ôµ÷É«°å½øÐÐË÷ÒýµÄÖµ¡£ÓÐ¹Ø¸ü¶àµÄÐÅÏ¢£¬Çë²Î¿¼ÏÂÃæµÄ±¸×¢²¿·Ö¡£
-²ÎÊýfuColorUse±ØÐëÊÇÏÂÁÐÖµÖ®Ò»£¬ÕâÐ©ÖµµÄº¬ÒåÈçÏÂ£º
-    1¡¢DIB_PAL_COLORS£º±íÊ¾ÑÕÉ«±íÓÉ16Î»µÄË÷ÒýÖµ[Êý×é]×é³É£¬ÀûÓÃÕâÐ©Öµ¿É¶Ôµ±Ç°Ñ¡ÖÐµÄÂß¼­µ÷É«°å½øÐÐË÷Òý¡£
-  2¡¢DIB_RGB_COLORS£º±íÊ¾ÑÕÉ«±í°üº¬Ô­ÒåµÄRGBÖµ¡£
+
+ ~~~ c++
+/*²ÎÊý¶¨ÒåÈçÏÂ£º*/
+hdc£º/*Éè±¸»·¾³¾ä±ú*/
+XDest, YDest £º/*ÏÔÊ¾ÔÚÆÁÄ»ÉÏÃæµÄ×óÉÏ½ÇµãµÄ×ø±ê¡£*/
+dwWidth£º/*Í¼Ïñ¿í¶È¡£*/
+dwHeight£º/*Í¼Ïñ¸ß¶È¡£*/
+XSrc £¬YSrc £º /*Í¼ÏñµÄÆðÊ¼×ø±ê £¬Ò»°ã´Ë´¦Îª 0 0 ¡£*/   /*ÆäÊµ, XSrc ,YSrc dwWidth dwHeight±ãÊÇ½«Í¼ÏñµÄ¾ØÐÎÈ·¶¨³öÀ´*/
+uStartScan£º /*Ö¸¶¨DIBÖÐµÄÆðÊ¼[É¨ÃèÏß]£¬´Ë´¦Ò»°ãÎª 0 ¡£*/
+cScanLInes£º /*Ö¸¶¨²ÎÊýlpvBitsÖ¸ÏòµÄÊý×éÖÐ°üº¬µÄDIBÉ¨ÃèÏßÊýÄ¿¡£*/  /*Ëµ°×ÁË¾ÍÊÇÍ¼ÏñµÄ¸ß¶È*/
+lpvBits£º /*Ö¸Ïò´æ´¢DIBÑÕÉ«Êý¾ÝµÄ×Ö½ÚÀàÐÍ[Êý×é]µÄÖ¸Õë¡£*/
+lpbmi£º /*Ö¸ÏòBITMAPINFO½á¹¹µÄÖ¸Õë£¬¸Ã½á¹¹°üº¬ÓÐ¹ØDIBµÄÐÅÏ¢¡£*/
+/*fuColorUse£º Ö¸ÏòBITMAPINFO½á¹¹ÖÐµÄ³ÉÔ±bmiColorsÊÇ·ñ°üº¬Ã÷È·µÄRGBÖµ»ò¶Ôµ÷É«°å½øÐÐË÷ÒýµÄÖµ¡£ÓÐ¹Ø¸ü¶àµÄÐÅÏ¢£¬Çë²Î¿¼ÏÂÃæµÄ±¸×¢²¿·Ö¡£*/
+/*²ÎÊýfuColorUse±ØÐëÊÇÏÂÁÐÖµÖ®Ò»£¬ÕâÐ©ÖµµÄº¬ÒåÈçÏÂ£º*/
+    /*1¡¢DIB_PAL_COLORS£º±íÊ¾ÑÕÉ«±íÓÉ16Î»µÄË÷ÒýÖµ[Êý×é]×é³É£¬ÀûÓÃÕâÐ©Öµ¿É¶Ôµ±Ç°Ñ¡ÖÐµÄÂß¼­µ÷É«°å½øÐÐË÷Òý¡£*/
+   /* 2¡¢DIB_RGB_COLORS£º±íÊ¾ÑÕÉ«±í°üº¬Ô­ÒåµÄRGBÖµ¡£*/
   /*ÌØ±ð×¢Òâ£ºÓÉÓÚÄ¬ÈÏµÄÏÔÊ¾×ø±êÏµÓëÎÒÃÇÕý³£µÄ×ø±êÏµÊÇÏà·´µÄ£¬ËùÒÔÈç¹û½ö½öÓÃ´Ëº¯ÊýÕý³£ÏÔÊ¾³öÀ´£¬Í¼ÏñÊÇµ¹Á¢µÄ£¬ÈçºÎµ÷Õû¼û³ÌÐò*/
-   ¶ÔÓÚÕâ¸öº¯ÊýÀí½âÖ®ºóÎÒÃÇ±ã¿ÉÒÔ½øÐÐ±à³ÌÁË¡£
+   /*¶ÔÓÚÕâ¸öº¯ÊýÀí½âÖ®ºóÎÒÃÇ±ã¿ÉÒÔ½øÐÐ±à³ÌÁË¡£*/
 ~~~
 
 ### ËÄ¡¢ÊµÏÖ´úÂë
@@ -48,23 +50,23 @@ fuColorUse£º Ö¸ÏòBITMAPINFO½á¹¹ÖÐµÄ³ÉÔ±bmiColorsÊÇ·ñ°üº¬Ã÷È·µÄRGBÖµ»ò¶Ôµ÷É«°å½øÐ
 void setBitmapInfo(BITMAPINFO *bitmapInfo,int width,int height)
 {   
          bitmapInfo->bmiHeader.biSize  = sizeof(BITMAPINFOHEADER);
-      bitmapInfo->bmiHeader.biWidth    = width;   
+         bitmapInfo->bmiHeader.biWidth    = width;   
          bitmapInfo->bmiHeader.biHeight   = -height;    //ÌØ±ð×¢Òâ´Ë´¦ÒªÉèÎª¸ºÖµ£¬ÓÃÓÚµ÷ÕûÍ¼ÏñµÄÏÔÊ¾·½Ïò£¬Èç¹ûÎª+£¬ÔòÍ¼Æ¬µÄÏÔÊ¾Îªµ¹Á¢µÄÍ¼Ïñ£¬Îªµ÷ÕûÎªÕýÁ¢µÄÍ¼Ïñ¡£     bitmapInfo->bmiHeader.biPlanes   = 1;
-      bitmapInfo->bmiHeader.biBitCount  = 8;
-     bitmapInfo->bmiHeader.biCompression = 0;   
-        bitmapInfo->bmiHeader.biSizeImage  = (width+3)/4*4 * height;  
-        bitmapInfo->bmiHeader.biXPelsPerMeter = 0;  
-      bitmapInfo->bmiHeader.biYPelsPerMeter = 0;  
-       bitmapInfo->bmiHeader.biClrUsed    = 0;   
-       bitmapInfo->bmiHeader.biClrImportant = 0;  
-       int count = 0;    
+         bitmapInfo->bmiHeader.biBitCount  = 8;
+         bitmapInfo->bmiHeader.biCompression = 0;   
+         bitmapInfo->bmiHeader.biSizeImage  = (width+3)/4*4 * height;  
+         bitmapInfo->bmiHeader.biXPelsPerMeter = 0;  
+         bitmapInfo->bmiHeader.biYPelsPerMeter = 0;  
+         bitmapInfo->bmiHeader.biClrUsed    = 0;   
+         bitmapInfo->bmiHeader.biClrImportant = 0;  
+         int count = 0;    
         for(count=0;count<256;count++) 
-       {   
+        {   
            bitmapInfo->bmiColors[count].rgbBlue = count;   
-            bitmapInfo->bmiColors[count].rgbGreen = count; 
-          bitmapInfo->bmiColors[count].rgbRed = count;    
-            bitmapInfo->bmiColors[count].rgbReserved = 0;  
-      }
+           bitmapInfo->bmiColors[count].rgbGreen = count; 
+           bitmapInfo->bmiColors[count].rgbRed = count;    
+           bitmapInfo->bmiColors[count].rgbReserved = 0;  
+       }
  }
 int showGrayImg(BYTE * img,int width,int height)
 {    
@@ -84,3 +86,4 @@ int showGrayImg(BYTE * img,int width,int height)
      return 0;
  }
 ~~~
+
