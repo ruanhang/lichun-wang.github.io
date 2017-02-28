@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "LeetCode_07"
-category: coding
+category: Algorithm
 tags: [c++,算法,LeetCode]
 description: LeetCode
 =======
@@ -63,7 +63,8 @@ public:
 			return 0;
 		return answer;
     }
-};```
+};
+```
 
 ----
 >#####Run Time
