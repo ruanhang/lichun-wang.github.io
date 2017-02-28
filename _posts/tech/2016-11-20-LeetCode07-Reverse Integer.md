@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "LeetCode_07"
-category: Algorithm
+category: tech
 tags: [c++,算法,LeetCode]
 description: LeetCode
 ---  
