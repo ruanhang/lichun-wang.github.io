@@ -4,10 +4,6 @@ title:  "LeetCode_07"
 category: Algorithm
 tags: [c++,算法,LeetCode]
 description: LeetCode
-=======
-tags: [c++,MFC,图像处理]
-description: MFC下实现 灰度图像显示函数代码 C++
-
 ---  
 
 ####第七题：  reverse integer
