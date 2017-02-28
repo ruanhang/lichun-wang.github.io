@@ -1,86 +1,88 @@
 ---
 layout: post
-title:  "MFCÏÂÊµÏÖ »Ò¶ÈÍ¼ÏñÏÔÊ¾º¯Êı´úÂë C++"
+title:  "MFCä¸‹å®ç° ç°åº¦å›¾åƒæ˜¾ç¤ºå‡½æ•°ä»£ç  C++"
 category: coding
-tags: [c++,MFC,Í¼Ïñ´¦Àí]
-description:
+tags: [c++,MFC,å›¾åƒå¤„ç†]
+description: MFCä¸‹å®ç° ç°åº¦å›¾åƒæ˜¾ç¤ºå‡½æ•°ä»£ç  C++
 ---  
 
 ---
-### Ò»¡¢ÎÊÌâÃèÊö
- > Ê×ÏÈ£¬ÔÚ×öÍ¼Ïñ±à³ÌµÄ¹ı³ÌÖĞ£¬¶ÔÓÚÍ¼ÏñµÄÏÔÊ¾ÊÇ·Ç³£ÖØÒªµÄ£¬ÎÒÃÇ¶ÔÓÚÍ¼ÏñµÄ´¦Àí£¬¾­³£»áÓÃµ½Í¼ÏñµÄÏÔÊ¾£¬ÓÃÓÚ²é¿´½á¹ûÊÇ·ñÕıÈ·£¬ËùÒÔÎÒÃÇ×ÔÈ»»á²úÉúÒ»¸öÏë·¨£¬ÊÇ·ñ¿ÉÒÔ±àĞ´Ò»¸öÍ¼ÏñÏÔÊ¾µÄº¯Êı£¬ÀàËÆÓÚmatlab»òÕßopenCVÖĞµÄimshow()º¯Êı£¬¿ÉÒÔËæÊ±½«Í¼Ïñ´òÓ¡³öÀ´ÄØ£¿´ğ°¸±ØÈ»ÊÇ¿Ï¶¨µÄ£¬ÔÚÕâÀï£¬ÎÒÃÇÔÚmfc»·¾³ÏÂÊµÏÖ×Ô¼ºµÄimshow()º¯Êı¡£²¢ÇÒÔÚmfc»·¾³ÏÂ£¬vc++ÎªÎÒÃÇÌá¹©ÁËºÜ¶à±ã½İµÄ½á¹¹ÌåºÍº¯Êı£¬Ê¹ÓÃÆğÀ´ºÜ·½±ã¡£
+
+### ä¸€ã€é—®é¢˜æè¿°
+ > é¦–å…ˆï¼Œåœ¨åšå›¾åƒç¼–ç¨‹çš„è¿‡ç¨‹ä¸­ï¼Œå¯¹äºå›¾åƒçš„æ˜¾ç¤ºæ˜¯éå¸¸é‡è¦çš„ï¼Œæˆ‘ä»¬å¯¹äºå›¾åƒçš„å¤„ç†ï¼Œç»å¸¸ä¼šç”¨åˆ°å›¾åƒçš„æ˜¾ç¤ºï¼Œç”¨äºæŸ¥çœ‹ç»“æœæ˜¯å¦æ­£ç¡®ï¼Œæ‰€ä»¥æˆ‘ä»¬è‡ªç„¶ä¼šäº§ç”Ÿä¸€ä¸ªæƒ³æ³•ï¼Œæ˜¯å¦å¯ä»¥ç¼–å†™ä¸€ä¸ªå›¾åƒæ˜¾ç¤ºçš„å‡½æ•°ï¼Œç±»ä¼¼äºmatlabæˆ–è€…openCVä¸­çš„imshow()å‡½æ•°ï¼Œå¯ä»¥éšæ—¶å°†å›¾åƒæ‰“å°å‡ºæ¥å‘¢ï¼Ÿç­”æ¡ˆå¿…ç„¶æ˜¯è‚¯å®šçš„ï¼Œåœ¨è¿™é‡Œï¼Œæˆ‘ä»¬åœ¨mfcç¯å¢ƒä¸‹å®ç°è‡ªå·±çš„imshow()å‡½æ•°ã€‚å¹¶ä¸”åœ¨mfcç¯å¢ƒä¸‹ï¼Œvc++ä¸ºæˆ‘ä»¬æä¾›äº†å¾ˆå¤šä¾¿æ·çš„ç»“æ„ä½“å’Œå‡½æ•°ï¼Œä½¿ç”¨èµ·æ¥å¾ˆæ–¹ä¾¿ã€‚
 
 ---
 
-### ¶ş¡¢½â¾ö·½·¨
->ÏÔÊ¾Í¼Ïñ£¬ÎÒÃÇÖ÷ÒªÓÃµ½µÄº¯ÊıÊÇ**SetDIBitsToDevice()**;Õâ¸öº¯Êı£¬Õâ¸öº¯ÊıµÄ×÷ÓÃ±ãÊÇ½«Í¼ÏñÏÔÊ¾ÔÚÊä³öÏÔÊ¾Æ÷ÉÏÃæ£¬º¯ÊıµÄÏêÏ¸½éÉÜÔÚÕâÀïÎÒ±ã²»×öÏêÏ¸²ûÊöÁË£¬¶ÁÕß¿ÉÒÔ×ÔĞĞµÄ²é¿´°Ù¶È°Ù¿ÆÁ´½Ó£¨[http://baike.baidu.com/linkurl=D8WZ6hoanRGCSCrjCia5BKJli5saxSmdi8guNtlvrrlbUxy1BF52o5q1LwImvvHQ5gRCxZMfS0HdrF0C0kv4Q_](https://www.baidu.com/swd=SetDIBitsToDevice&rsv_spt=1&rsv_iqid=0x9b522a5b00009696&issp=1&f=8&rsv_bp=0&rsv_idx=2&ie=utf-8&tn=baiduhome_pg&rsv_enter=1&rsv_sug3=2&rsv_sug1=1&rsv_n=2)£©
+### äºŒã€è§£å†³æ–¹æ³•
+> æ˜¾ç¤ºå›¾åƒï¼Œæˆ‘ä»¬ä¸»è¦ç”¨åˆ°çš„å‡½æ•°æ˜¯**SetDIBitsToDevice()**;è¿™ä¸ªå‡½æ•°ï¼Œè¿™ä¸ªå‡½æ•°çš„ä½œç”¨ä¾¿æ˜¯å°†å›¾åƒæ˜¾ç¤ºåœ¨è¾“å‡ºæ˜¾ç¤ºå™¨ä¸Šé¢ï¼Œå‡½æ•°çš„è¯¦ç»†ä»‹ç»åœ¨è¿™é‡Œæˆ‘ä¾¿ä¸åšè¯¦ç»†é˜è¿°äº†ï¼Œè¯»è€…å¯ä»¥è‡ªè¡Œçš„æŸ¥çœ‹ç™¾åº¦ç™¾ç§‘é“¾æ¥ï¼ˆ[http://baike.baidu.com/linkurl=D8WZ6hoanRGCSCrjCia5BKJli5saxSmdi8guNtlvrrlbUxy1BF52o5q1LwImvvHQ5gRCxZMfS0HdrF0C0kv4Q_](https://www.baidu.com/swd=SetDIBitsToDevice&rsv_spt=1&rsv_iqid=0x9b522a5b00009696&issp=1&f=8&rsv_bp=0&rsv_idx=2&ie=utf-8&tn=baiduhome_pg&rsv_enter=1&rsv_sug3=2&rsv_sug1=1&rsv_n=2)ï¼‰
 
-### Èı¡¢Ö÷Òª½Ó¿Úº¯Êı½éÉÜ
-> ÕâÀïÖ÷Òª½éÉÜÒ»ÏÂº¯Êı¡£
-   º¯ÊıÔ­ĞÍÎª£º
-  int SetDIBitsToDevice(HDC hdc, int xDest, int Ydest, DWORD dwWidth, DWORD dwHeight, intXSrc, int Ysrc, UINT uStartScan, UINT cScanLines, CONST VOID *lpvBits, CONST BITMAPINFO *lpbmi, UINT fuColorUse)£»
-~~~
-²ÎÊı¶¨ÒåÈçÏÂ£º
- hdc£ºÉè±¸»·¾³¾ä±ú
-XDest, YDest £ºÏÔÊ¾ÔÚÆÁÄ»ÉÏÃæµÄ×óÉÏ½ÇµãµÄ×ø±ê¡£
-dwWidth£ºÍ¼Ïñ¿í¶È¡£
-dwHeight£ºÍ¼Ïñ¸ß¶È¡£
-XSrc £¬YSrc £º Í¼ÏñµÄÆğÊ¼×ø±ê £¬Ò»°ã´Ë´¦Îª 0 0 ¡£   /*ÆäÊµ, XSrc ,YSrc dwWidth dwHeight±ãÊÇ½«Í¼ÏñµÄ¾ØĞÎÈ·¶¨³öÀ´*/
-uStartScan£º Ö¸¶¨DIBÖĞµÄÆğÊ¼[É¨ÃèÏß]£¬´Ë´¦Ò»°ãÎª 0 ¡£
-cScanLInes£º Ö¸¶¨²ÎÊılpvBitsÖ¸ÏòµÄÊı×éÖĞ°üº¬µÄDIBÉ¨ÃèÏßÊıÄ¿¡£  /*Ëµ°×ÁË¾ÍÊÇÍ¼ÏñµÄ¸ß¶È*/
-lpvBits£º Ö¸Ïò´æ´¢DIBÑÕÉ«Êı¾İµÄ×Ö½ÚÀàĞÍ[Êı×é]µÄÖ¸Õë¡£
-lpbmi£º Ö¸ÏòBITMAPINFO½á¹¹µÄÖ¸Õë£¬¸Ã½á¹¹°üº¬ÓĞ¹ØDIBµÄĞÅÏ¢¡£
-fuColorUse£º Ö¸ÏòBITMAPINFO½á¹¹ÖĞµÄ³ÉÔ±bmiColorsÊÇ·ñ°üº¬Ã÷È·µÄRGBÖµ»ò¶Ôµ÷É«°å½øĞĞË÷ÒıµÄÖµ¡£ÓĞ¹Ø¸ü¶àµÄĞÅÏ¢£¬Çë²Î¿¼ÏÂÃæµÄ±¸×¢²¿·Ö¡£
-²ÎÊıfuColorUse±ØĞëÊÇÏÂÁĞÖµÖ®Ò»£¬ÕâĞ©ÖµµÄº¬ÒåÈçÏÂ£º
-    1¡¢DIB_PAL_COLORS£º±íÊ¾ÑÕÉ«±íÓÉ16Î»µÄË÷ÒıÖµ[Êı×é]×é³É£¬ÀûÓÃÕâĞ©Öµ¿É¶Ôµ±Ç°Ñ¡ÖĞµÄÂß¼­µ÷É«°å½øĞĞË÷Òı¡£
-  2¡¢DIB_RGB_COLORS£º±íÊ¾ÑÕÉ«±í°üº¬Ô­ÒåµÄRGBÖµ¡£
-  /*ÌØ±ğ×¢Òâ£ºÓÉÓÚÄ¬ÈÏµÄÏÔÊ¾×ø±êÏµÓëÎÒÃÇÕı³£µÄ×ø±êÏµÊÇÏà·´µÄ£¬ËùÒÔÈç¹û½ö½öÓÃ´Ëº¯ÊıÕı³£ÏÔÊ¾³öÀ´£¬Í¼ÏñÊÇµ¹Á¢µÄ£¬ÈçºÎµ÷Õû¼û³ÌĞò*/
-   ¶ÔÓÚÕâ¸öº¯ÊıÀí½âÖ®ºóÎÒÃÇ±ã¿ÉÒÔ½øĞĞ±à³ÌÁË¡£
+### ä¸‰ã€ä¸»è¦æ¥å£å‡½æ•°ä»‹ç»
+> è¿™é‡Œä¸»è¦ä»‹ç»ä¸€ä¸‹å‡½æ•°ã€‚
+   å‡½æ•°åŸå‹ä¸ºï¼š
+  int SetDIBitsToDevice(HDC hdc, int xDest, int Ydest, DWORD dwWidth, DWORD dwHeight, intXSrc, int Ysrc, UINT uStartScan, UINT cScanLines, CONST VOID *lpvBits, CONST BITMAPINFO *lpbmi, UINT fuColorUse)ï¼›
+~~~ c++
+å‚æ•°å®šä¹‰å¦‚ä¸‹ï¼š
+hdcï¼šè®¾å¤‡ç¯å¢ƒå¥æŸ„
+XDest, YDest ï¼šæ˜¾ç¤ºåœ¨å±å¹•ä¸Šé¢çš„å·¦ä¸Šè§’ç‚¹çš„åæ ‡ã€‚
+dwWidthï¼šå›¾åƒå®½åº¦ã€‚
+dwHeightï¼šå›¾åƒé«˜åº¦ã€‚
+XSrc ï¼ŒYSrc ï¼š å›¾åƒçš„èµ·å§‹åæ ‡ ï¼Œä¸€èˆ¬æ­¤å¤„ä¸º 0 0 ã€‚   /*å…¶å®, XSrc ,YSrc dwWidth dwHeightä¾¿æ˜¯å°†å›¾åƒçš„çŸ©å½¢ç¡®å®šå‡ºæ¥*/
+uStartScanï¼š æŒ‡å®šDIBä¸­çš„èµ·å§‹[æ‰«æçº¿]ï¼Œæ­¤å¤„ä¸€èˆ¬ä¸º 0 ã€‚
+cScanLInesï¼š æŒ‡å®šå‚æ•°lpvBitsæŒ‡å‘çš„æ•°ç»„ä¸­åŒ…å«çš„DIBæ‰«æçº¿æ•°ç›®ã€‚  /*è¯´ç™½äº†å°±æ˜¯å›¾åƒçš„é«˜åº¦*/
+lpvBitsï¼š æŒ‡å‘å­˜å‚¨DIBé¢œè‰²æ•°æ®çš„å­—èŠ‚ç±»å‹[æ•°ç»„]çš„æŒ‡é’ˆã€‚
+lpbmiï¼š æŒ‡å‘BITMAPINFOç»“æ„çš„æŒ‡é’ˆï¼Œè¯¥ç»“æ„åŒ…å«æœ‰å…³DIBçš„ä¿¡æ¯ã€‚
+fuColorUseï¼š æŒ‡å‘BITMAPINFOç»“æ„ä¸­çš„æˆå‘˜bmiColorsæ˜¯å¦åŒ…å«æ˜ç¡®çš„RGBå€¼æˆ–å¯¹è°ƒè‰²æ¿è¿›è¡Œç´¢å¼•çš„å€¼ã€‚æœ‰å…³æ›´å¤šçš„ä¿¡æ¯ï¼Œè¯·å‚è€ƒä¸‹é¢çš„å¤‡æ³¨éƒ¨åˆ†ã€‚
+å‚æ•°fuColorUseå¿…é¡»æ˜¯ä¸‹åˆ—å€¼ä¹‹ä¸€ï¼Œè¿™äº›å€¼çš„å«ä¹‰å¦‚ä¸‹ï¼š
+    1ã€DIB_PAL_COLORSï¼šè¡¨ç¤ºé¢œè‰²è¡¨ç”±16ä½çš„ç´¢å¼•å€¼[æ•°ç»„]ç»„æˆï¼Œåˆ©ç”¨è¿™äº›å€¼å¯å¯¹å½“å‰é€‰ä¸­çš„é€»è¾‘è°ƒè‰²æ¿è¿›è¡Œç´¢å¼•ã€‚
+    2ã€DIB_RGB_COLORSï¼šè¡¨ç¤ºé¢œè‰²è¡¨åŒ…å«åŸä¹‰çš„RGBå€¼ã€‚
+  /*ç‰¹åˆ«æ³¨æ„ï¼šç”±äºé»˜è®¤çš„æ˜¾ç¤ºåæ ‡ç³»ä¸æˆ‘ä»¬æ­£å¸¸çš„åæ ‡ç³»æ˜¯ç›¸åçš„ï¼Œæ‰€ä»¥å¦‚æœä»…ä»…ç”¨æ­¤å‡½æ•°æ­£å¸¸æ˜¾ç¤ºå‡ºæ¥ï¼Œå›¾åƒæ˜¯å€’ç«‹çš„ï¼Œå¦‚ä½•è°ƒæ•´è§ç¨‹åº*/
+   å¯¹äºè¿™ä¸ªå‡½æ•°ç†è§£ä¹‹åæˆ‘ä»¬ä¾¿å¯ä»¥è¿›è¡Œç¼–ç¨‹äº†ã€‚
 ~~~
 
-### ËÄ¡¢ÊµÏÖ´úÂë
->º¯ÊıËµÃ÷ £º
-       ÏÔÊ¾º¯ÊıÎªshowGrayImg(),Èı¸ö²ÎÊı·Ö±ğÎª£¬Í¼ÏñÖ¸Õë£¬Í¼Ïñ¿í¶È£¬ÒÔ¼°Í¼Ïñ¸ß¶È¡£
-   ÏÔÊ¾Í¼ÏñÖĞ£¬Ê×ÏÈµ÷ÓÃ setBitMapInfo()º¯ÊıÉèÖÃÍ¼ÏñµÄÎÄ¼şÍ·£¬ÓÃÓÚsetDIBitsToDevice()º¯ÊıµÄµ÷ÓÃ¡£
-     **ÌØ±ğ×¢Òâ£¬ºóÃæµÄ¶ÔÓÚÍ¼Ïñ¿í¶ÈÎª4µÄÕûÊı±¶µÄµ÷Õû£¬²¢½«Í¼Ïñ±ß½ç¶ÔÆë£¬¼´Í¼ÏñÃ¿Ò»ĞĞµÄ´æ´¢´óĞ¡¶¼Îª4µÄÕûÊı±¶¡£**µ½´Ë£¬´Ëº¯Êı±ã¿ÉÒÔÓÃÓÚÔÚ³ÌĞòÖĞËæÊ±ÏÔÊ¾º¯ÊıÁË£¬µÈÍ¬ÓÚmatlabÖĞµÄimshow()º¯Êı¡£
+### å››ã€å®ç°ä»£ç 
+>å‡½æ•°è¯´æ˜ ï¼š
+       æ˜¾ç¤ºå‡½æ•°ä¸ºshowGrayImg(),ä¸‰ä¸ªå‚æ•°åˆ†åˆ«ä¸ºï¼Œå›¾åƒæŒ‡é’ˆï¼Œå›¾åƒå®½åº¦ï¼Œä»¥åŠå›¾åƒé«˜åº¦ã€‚
+   æ˜¾ç¤ºå›¾åƒä¸­ï¼Œé¦–å…ˆè°ƒç”¨ setBitMapInfo()å‡½æ•°è®¾ç½®å›¾åƒçš„æ–‡ä»¶å¤´ï¼Œç”¨äºsetDIBitsToDevice()å‡½æ•°çš„è°ƒç”¨ã€‚
+     **ç‰¹åˆ«æ³¨æ„ï¼Œåé¢çš„å¯¹äºå›¾åƒå®½åº¦ä¸º4çš„æ•´æ•°å€çš„è°ƒæ•´ï¼Œå¹¶å°†å›¾åƒè¾¹ç•Œå¯¹é½ï¼Œå³å›¾åƒæ¯ä¸€è¡Œçš„å­˜å‚¨å¤§å°éƒ½ä¸º4çš„æ•´æ•°å€ã€‚**åˆ°æ­¤ï¼Œæ­¤å‡½æ•°ä¾¿å¯ä»¥ç”¨äºåœ¨ç¨‹åºä¸­éšæ—¶æ˜¾ç¤ºå‡½æ•°äº†ï¼Œç­‰åŒäºmatlabä¸­çš„imshow()å‡½æ•°ã€‚
 
 ~~~ c++
 void setBitmapInfo(BITMAPINFO *bitmapInfo,int width,int height)
 {   
          bitmapInfo->bmiHeader.biSize  = sizeof(BITMAPINFOHEADER);
-      bitmapInfo->bmiHeader.biWidth    = width;   
-         bitmapInfo->bmiHeader.biHeight   = -height;    //ÌØ±ğ×¢Òâ´Ë´¦ÒªÉèÎª¸ºÖµ£¬ÓÃÓÚµ÷ÕûÍ¼ÏñµÄÏÔÊ¾·½Ïò£¬Èç¹ûÎª+£¬ÔòÍ¼Æ¬µÄÏÔÊ¾Îªµ¹Á¢µÄÍ¼Ïñ£¬Îªµ÷ÕûÎªÕıÁ¢µÄÍ¼Ïñ¡£     bitmapInfo->bmiHeader.biPlanes   = 1;
-      bitmapInfo->bmiHeader.biBitCount  = 8;
-     bitmapInfo->bmiHeader.biCompression = 0;   
-        bitmapInfo->bmiHeader.biSizeImage  = (width+3)/4*4 * height;  
-        bitmapInfo->bmiHeader.biXPelsPerMeter = 0;  
-      bitmapInfo->bmiHeader.biYPelsPerMeter = 0;  
-       bitmapInfo->bmiHeader.biClrUsed    = 0;   
-       bitmapInfo->bmiHeader.biClrImportant = 0;  
-       int count = 0;    
+         bitmapInfo->bmiHeader.biWidth    = width;   
+         bitmapInfo->bmiHeader.biHeight   = -height;    //ç‰¹åˆ«æ³¨æ„æ­¤å¤„è¦è®¾ä¸ºè´Ÿå€¼ï¼Œç”¨äºè°ƒæ•´å›¾åƒçš„æ˜¾ç¤ºæ–¹å‘ï¼Œå¦‚æœä¸º+ï¼Œåˆ™å›¾ç‰‡çš„æ˜¾ç¤ºä¸ºå€’ç«‹çš„å›¾åƒï¼Œä¸ºè°ƒæ•´ä¸ºæ­£ç«‹çš„å›¾åƒã€‚     bitmapInfo->bmiHeader.biPlanes   = 1;
+         bitmapInfo->bmiHeader.biBitCount  = 8;
+         bitmapInfo->bmiHeader.biCompression = 0;   
+         bitmapInfo->bmiHeader.biSizeImage  = (width+3)/4*4 * height;  
+         bitmapInfo->bmiHeader.biXPelsPerMeter = 0;  
+         bitmapInfo->bmiHeader.biYPelsPerMeter = 0;  
+         bitmapInfo->bmiHeader.biClrUsed    = 0;   
+         bitmapInfo->bmiHeader.biClrImportant = 0;  
+         int count = 0;    
         for(count=0;count<256;count++) 
-       {   
+        {   
            bitmapInfo->bmiColors[count].rgbBlue = count;   
-            bitmapInfo->bmiColors[count].rgbGreen = count; 
-          bitmapInfo->bmiColors[count].rgbRed = count;    
-            bitmapInfo->bmiColors[count].rgbReserved = 0;  
-      }
+           bitmapInfo->bmiColors[count].rgbGreen = count; 
+           bitmapInfo->bmiColors[count].rgbRed = count;    
+           bitmapInfo->bmiColors[count].rgbReserved = 0;  
+       }
  }
 int showGrayImg(BYTE * img,int width,int height)
 {    
-     BITMAPINFO * bitmapInfo = (BITMAPINFO*)new    BYTE[sizeof(BITMAPINFOHEADER)+256*sizeof(RGBQUAD)];  //¿ª±ÙbmpÍ·ÒÔ¼°µ÷É«°å¿Õ¼ä   
-     setBitmapInfo(bitmapInfo,width,height);   //ÉèÖÃbmpÍ·ÎÄ¼şÒÔ¼°µ÷É«°å   
-     int newWidth = (width + 3)/4*4;  //ÓÃÓÚµ÷ÕûÍ¼Ïñ¿í¶ÈÎª4µÄÕûÊı±¶£¬ÒòÎªÏÔÊ¾µÄÊ±ºòÒªÇóµÄÊÇ°´ÕÕ´æ´¢ÖĞµÄĞÎÊ½½øĞĞÏÔÊ¾¡£   int count = 0;   
-     BYTE * memImg = new BYTE[newWidth * height];  //¿ª±Ù¿Õ¼äÓÃÓÚ¾­Í¼Ïñ¿í¶È¶ÔÆë  
+     BITMAPINFO * bitmapInfo = (BITMAPINFO*)new    BYTE[sizeof(BITMAPINFOHEADER)+256*sizeof(RGBQUAD)];  //å¼€è¾Ÿbmpå¤´ä»¥åŠè°ƒè‰²æ¿ç©ºé—´   
+     setBitmapInfo(bitmapInfo,width,height);   //è®¾ç½®bmpå¤´æ–‡ä»¶ä»¥åŠè°ƒè‰²æ¿   
+     int newWidth = (width + 3)/4*4;  //ç”¨äºè°ƒæ•´å›¾åƒå®½åº¦ä¸º4çš„æ•´æ•°å€ï¼Œå› ä¸ºæ˜¾ç¤ºçš„æ—¶å€™è¦æ±‚çš„æ˜¯æŒ‰ç…§å­˜å‚¨ä¸­çš„å½¢å¼è¿›è¡Œæ˜¾ç¤ºã€‚   int count = 0;   
+     BYTE * memImg = new BYTE[newWidth * height];  //å¼€è¾Ÿç©ºé—´ç”¨äºç»å›¾åƒå®½åº¦å¯¹é½  
      memset(memImg,0,newWidth*height);  
      for(;count<height;count++)  
      {     
-        memcpy (memImg+count*newWidth,img+count*width,width);  //µ÷ÕûÏÔÊ¾±ß½ç  
+        memcpy (memImg+count*newWidth,img+count*width,width);  //è°ƒæ•´æ˜¾ç¤ºè¾¹ç•Œ  
      }   
-     HDC hDC= GetDC( GetForegroundWindow() );          //»ñÈ¡µ±Ç°ÏÔÊ¾Æ÷µÄ¾ä±ú   
+     HDC hDC= GetDC( GetForegroundWindow() );          //è·å–å½“å‰æ˜¾ç¤ºå™¨çš„å¥æŸ„   
      SetDIBitsToDevice(hDC,100,70,width,height,0,0,   0,height,memImg,bitmapInfo,DIB_RGB_COLORS);  
      delete []bitmapInfo;   
      delete []memImg;   
      return 0;
  }
 ~~~
+
