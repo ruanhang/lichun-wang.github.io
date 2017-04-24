@@ -2,20 +2,13 @@
 layout: post
 title:  "MFC下实现 灰度图像显示函数代码 C++"
 category: coding
-<<<<<<< HEAD
 tags: [c++,MFC]
 description: MFC,C++
-=======
-tags: [c++,MFC,图像处理]
-description: MFC下实现 灰度图像显示函数代码 C++
->>>>>>> origin/master
 ---  
-
----
 
 ### 函数原型
 > 函数原型
-  int SetDIBitsToDevice(HDC hdc, int xDest, int Ydest, DWORD dwWidth, DWORD dwHeight, intXSrc, int Ysrc, UINT uStartScan, UINT cScanLines, CONST VOID *lpvBits, CONST BITMAPINFO *lpbmi, UINT fuColorUse)��
+  int SetDIBitsToDevice(HDC hdc, int xDest, int Ydest, DWORD dwWidth, DWORD dwHeight, intXSrc, int Ysrc, UINT uStartScan, UINT cScanLines, CONST VOID *lpvBits, CONST BITMAPINFO *lpbmi, UINT fuColorUse)û
 
  ~~~ c++
  hdc：设备环境句柄
@@ -31,7 +24,8 @@ fuColorUse： //指向BITMAPINFO结构中的成员bmiColors是否包含明确的
 //参数fuColorUse必须是下列值之一，这些值的含义如下：
 DIB_PAL_COLORS：//表示颜色表由16位的索引值数组组成，利用这些值可对当前选中的逻辑调色板进行索引。
 DIB_RGB_COLORS：//表示颜色表包含原义的RGB值。
-=======
+
+
 ### 一、问题描述
  > 首先，在做图像编程的过程中，对于图像的显示是非常重要的，我们对于图像的处理，经常会用到图像的显示，用于查看结果是否正确，所以我们自然会产生一个想法，是否可以编写一个图像显示的函数，类似于matlab或者openCV中的imshow()函数，可以随时将图像打印出来呢？答案必然是肯定的，在这里，我们在mfc环境下实现自己的imshow()函数。并且在mfc环境下，vc++为我们提供了很多便捷的结构体和函数，使用起来很方便。
 
@@ -70,12 +64,17 @@ fuColorUse： 指向BITMAPINFO结构中的成员bmiColors是否包含明确的RG
    显示图像中，首先调用 setBitMapInfo()函数设置图像的文件头，用于setDIBitsToDevice()函数的调用。
      **特别注意，后面的对于图像宽度为4的整数倍的调整，并将图像边界对齐，即图像每一行的存储大小都为4的整数倍。**到此，此函数便可以用于在程序中随时显示函数了，等同于matlab中的imshow()函数。
 
+
+
+
+
 ~~~ c++
 void setBitmapInfo(BITMAPINFO *bitmapInfo,int width,int height)
 {   
          bitmapInfo->bmiHeader.biSize  = sizeof(BITMAPINFOHEADER);
          bitmapInfo->bmiHeader.biWidth    = width;   
-         bitmapInfo->bmiHeader.biHeight   = -height;    //特别注意此处要设为负值，用于调整图像的显示方向，如果为+，则图片的显示为倒立的图像，为调整为正立的图像。     bitmapInfo->bmiHeader.biPlanes   = 1;
+         bitmapInfo->bmiHeader.biHeight   = -height;  
+         bitmapInfo->bmiHeader.biPlanes   = 1;
          bitmapInfo->bmiHeader.biBitCount  = 8;
          bitmapInfo->bmiHeader.biCompression = 0;   
          bitmapInfo->bmiHeader.biSizeImage  = (width+3)/4*4 * height;  
@@ -94,16 +93,17 @@ void setBitmapInfo(BITMAPINFO *bitmapInfo,int width,int height)
  }
 int showGrayImg(BYTE * img,int width,int height)
 {    
-     BITMAPINFO * bitmapInfo = (BITMAPINFO*)new    BYTE[sizeof(BITMAPINFOHEADER)+256*sizeof(RGBQUAD)];  //开辟bmp头以及调色板空间   
-     setBitmapInfo(bitmapInfo,width,height);   //设置bmp头文件以及调色板   
-     int newWidth = (width + 3)/4*4;  //用于调整图像宽度为4的整数倍，因为显示的时候要求的是按照存储中的形式进行显示。   int count = 0;   
-     BYTE * memImg = new BYTE[newWidth * height];  //开辟空间用于经图像宽度对齐  
+     BITMAPINFO * bitmapInfo = (BITMAPINFO*)new    BYTE[sizeof(BITMAPINFOHEADER)+256*sizeof(RGBQUAD)]; 
+     setBitmapInfo(bitmapInfo,width,height);   
+     int newWidth = (width + 3)/4*4;  
+     int count = 0;   
+     BYTE * memImg = new BYTE[newWidth * height];  
      memset(memImg,0,newWidth*height);  
      for(;count<height;count++)  
      {     
-        memcpy (memImg+count*newWidth,img+count*width,width);  //调整显示边界  
+        memcpy (memImg+count*newWidth,img+count*width,width);  
      }   
-     HDC hDC= GetDC( GetForegroundWindow() );          //获取当前显示器的句柄   
+     HDC hDC= GetDC( GetForegroundWindow() );          
      SetDIBitsToDevice(hDC,100,70,width,height,0,0,   0,height,memImg,bitmapInfo,DIB_RGB_COLORS);  
      delete []bitmapInfo;   
      delete []memImg;   
