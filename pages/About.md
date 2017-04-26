@@ -19,7 +19,8 @@ header-img: "img/pages/about.jpg"
 
 ## Skill Keywords
 
->* Algorithm of Digital Image Process 
+>* Algorithm of Digital Image Process
+* machine learning and deep learning 
 * C++ OpenCV
 * MFC
 * Matlab
