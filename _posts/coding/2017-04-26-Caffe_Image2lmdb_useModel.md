@@ -11,8 +11,8 @@ header-img: "img/pages/template.jpg"
 * 1、将图片放入不同的文件夹：如：train/class1, train/class2 , test/class3, test/class4
 * 2、生成train.txt以及test.txt文件存放图像名称及类别
 	* cd 到train ， test同层文件目录
-	* ls 【文件路径：train/1】 | sed "s:^:【文件路径1/】:"| sed "s:$:  【类别1:】" >> t_train.txt
-	* ls train/first | sed "s:^:first/:"| sed "s:$: 1:" >> t_train.txt
+	* ls 【文件路径：train/1】|sed "s:^:【文件路径1/】:"|sed "s:$:  【类别1:】" >> t_train.txt（**注：sed前面有竖线**）
+	* ls train/first|sed "s:^:first/:"|sed "s:$: 1:" >> t_train.txt
  
 * 3、调用convert_imageset命令：
 	* cd 到train ， test同层文件目录
