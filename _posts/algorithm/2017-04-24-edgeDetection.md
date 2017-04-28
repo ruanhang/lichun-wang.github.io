@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "边缘检测总结"
-category: [coding ]
+category: [algorithm ]
 tags: [c++,edge detection,algorithms]
 description: 边缘检测
 header-img: "img/pages/template.jpg"
