@@ -2,7 +2,7 @@
 layout: post
 title:  "caffe自定义Neuron层"
 category: [coding ]
-tags: [c++,caffe,algorithms，2017]
+tags: [c++,caffe,algorithms,2017]
 description: caffe自定义Neuron层"
 header-img: "img/pages/template.jpg"
 ---
