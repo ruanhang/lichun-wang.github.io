@@ -64,9 +64,9 @@ message V1LayerParameter{
 
 ### 5. 重新编译和install
 * 1.cd 到build目录下
-cmake -D CPU_ONLY = ON -D CMAKE_PREFIX_INSTALL=/usr/local ..
-* 2. cd ..
-make all
+cmake -D CPU_ONLY=ON -D CMAKE_PREFIX_INSTALL=/usr/local ..
+*
+* 2. cd .. 到caffe根目录后 make all
 
 
 ### 6. 测试代码
