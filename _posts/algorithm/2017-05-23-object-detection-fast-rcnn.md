@@ -7,9 +7,6 @@ description: Sort
 header-img: "img/pages/template.jpg"
 ---
 
-## 参考
-本文参考了saicoco的文章，https://saicoco.github.io/projects/
-
 
 ## Fast-RCNN  
 
@@ -20,7 +17,7 @@ Fast-RCNN之所以称为Fast,较RCNN快在proposals获取:RCNN将一张图上的
 
 上图　　
 
-![framework](https://github.com/saicoco/saicoco.github.io/blob/master/downloads/object_detection/framework.png)　　
+![framework](images/faster-rcnn-frame.png)
 
 就上图开讲吧，Fast-RCNN可以分为这么几个模块：
 
@@ -39,11 +36,11 @@ proposals投影到其对应feature maps上，然后利用roi_pooling_layer将ROI
 roi_pooling的作用是，将形状不一的propoasals通过maxpooling得到固定大小的maps,其思想来源于SPP-Net[^2],不同之处在于，SPP-Net是多层
 池化，roi_pooling是单层。如下图所示：　　
 
-![spp](https://github.com/saicoco/saicoco.github.io/blob/master/downloads/object_detection/spp.png)  
+![spp](images/faster-rcnn-spp.png)  
 
 为了将卷积层最后一层输出与全连接层匹配，利用SPP生成多个指定池化maps,使得对于不定尺寸的图片不需要经过放缩等操作即可输入到网络中。计算方法如下：　　　
 
-![spp](https://github.com/saicoco/saicoco.github.io/blob/master/downloads/object_detection/spp_idea.png)　　
+![spp](images/faster-rcnn-spp2.png)　　
 
 如上图，对于MxM的feature maps，预得到poolNxN,则需要计算滑动窗口大小和步长，通过步长预先计算，实现对任意pool结果的实现，此处滑动窗口`win_size = ceil(M/N), stride = floor(M/N)`
 有了合适的win_size和stride,便可实现图片不定大小的输入。　　
