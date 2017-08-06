@@ -54,6 +54,8 @@ def generate_anchors(base_size=16, ratios=[0.5, 1, 2],
     # feature maps上的每个点，在width方向最大偏移为14,同理在height上也是14.
     # 在图像左上角生成一个anchors,剩下的anchors在此基础上做偏移即可得到。
     # scales=[8, 16, 32],
+    #详细说明，基准坐标[0,0,15,15]利用ratios可以生成3个anchor分别为[0,0,16,16][-4,2,19,14][2.5,-3,13.5,19]
+    #然后再乘以变换比例得到9个anchor[128..,256..,512..]
     base_anchor = np.array([1, 1, base_size, base_size]) - 1
     ratio_anchors = _ratio_enum(base_anchor, ratios)
     anchors = np.vstack([_scale_enum(ratio_anchors[i, :], scales)
@@ -90,12 +92,12 @@ def _ratio_enum(anchor, ratios):
     Enumerate a set of anchors for each aspect ratio wrt an anchor.
     """
 
-    w, h, x_ctr, y_ctr = _whctrs(anchor)
+    w, h, x_ctr, y_ctr = _whctrs(anchor)  #返回anchor的中心以及长宽
     size = w * h
-    size_ratios = size / ratios
+    size_ratios = size / ratios  #尺寸 [128,256,512]
     ws = np.round(np.sqrt(size_ratios))
     hs = np.round(ws * ratios)
-    anchors = _mkanchors(ws, hs, x_ctr, y_ctr)
+    anchors = _mkanchors(ws, hs, x_ctr, y_ctr) #得到[0,0,16,16] [-3.5,2,18.5,13][2.5,-3,12.5,18]
     return anchors
 
 def _scale_enum(anchor, scales):
@@ -198,6 +200,7 @@ def _scale_enum(anchor, scales):
         # cell K shifts (K, 1, 4) to get
         # shift anchors (K, A, 4)
         # reshape to (K*A, 4) shifted anchors
+        #简单说就是对9个anchor,每一个都加上一个位移，得到9*K个位移
         A = self._num_anchors
         K = shifts.shape[0]
         # each anchor add with all shifts to get all anchors
@@ -230,7 +233,13 @@ def _scale_enum(anchor, scales):
 
         # overlaps between the anchors and the gt boxes(x1, y1, x2, y2, cls)
         # overlaps (ex, gt)
-
+        # 这里overlaps是计算所有anchor与ground-truth的重合度，它是一个len(anchors) x len(gt_boxes)的二维数组，每个元素是各个
+        # anchor和gt_boxes的overlap值，这个overlap值的计算是这样的：
+        # overlap = (重合部分面积) / (anchor面积 + gt_boxes面积 - 重合部分面积)
+        # argmax_overlaps是每个anchor对应最大overlap的gt_boxes的下标
+        # max_overlaps是每个anchor对应最大的overlap值相对应的
+        # gt_argmax_overlaps是每个gt_boxes对应最大overlap的anchor的下标
+        # gt_max_overlaps是每个gt_boxes对应最大的overlap值
         # 计算anchors与gt_boxes的overlap
         overlaps = bbox_overlaps(
             np.ascontiguousarray(anchors, dtype=np.float),
@@ -239,7 +248,7 @@ def _scale_enum(anchor, scales):
         argmax_overlaps = overlaps.argmax(axis=1)
         max_overlaps = overlaps[np.arange(len(inds_inside)), argmax_overlaps]
         gt_argmax_overlaps = overlaps.argmax(axis=0)
-        # 获取每列最大的overlap, 这里疑问，每列每行各代表啥。
+        # 获取每列最大的overlap, 目的是找到与roi重叠最大的区域，将其标记为1
         gt_max_overlaps = overlaps[gt_argmax_overlaps,
                                    np.arange(overlaps.shape[1])]
         gt_argmax_overlaps = np.where(overlaps == gt_max_overlaps)[0]
@@ -260,14 +269,16 @@ def _scale_enum(anchor, scales):
             labels[max_overlaps < cfg.TRAIN.RPN_NEGATIVE_OVERLAP] = 0
 
         # subsample positive labels if we have too many
+        # 如果正标签过多，则进行下采样，提取部分正标签
         num_fg = int(cfg.TRAIN.RPN_FG_FRACTION * cfg.TRAIN.RPN_BATCHSIZE)
         fg_inds = np.where(labels == 1)[0]
         if len(fg_inds) > num_fg:
-            disable_inds = npr.choice(
+            disable_inds = npr.choice( #随机选择标签为正的标记为-1
                 fg_inds, size=(len(fg_inds) - num_fg), replace=False)
             labels[disable_inds] = -1
 
         # subsample negative labels if we have too many
+        # 如果负标签过多，则进行下采样，提取部分负标签
         num_bg = cfg.TRAIN.RPN_BATCHSIZE - np.sum(labels == 1)
         bg_inds = np.where(labels == 0)[0]
         if len(bg_inds) > num_bg:
@@ -276,9 +287,10 @@ def _scale_enum(anchor, scales):
             labels[disable_inds] = -1
             #print "was %s inds, disabling %s, now %s inds" % (
                 #len(bg_inds), len(disable_inds), np.sum(labels == 0))
-
+        #这里将计算每一个anchor与重合度最高的ground_truth的偏移值
         bbox_targets = np.zeros((len(inds_inside), 4), dtype=np.float32)
         # transform anchors 's coordinate to [0, 1]
+        # 求bbox的回归目标
         bbox_targets = _compute_targets(anchors, gt_boxes[argmax_overlaps, :])
         # inside and outside means that anchors in geboxes or out of gtboxes.
         bbox_inside_weights = np.zeros((len(inds_inside), 4), dtype=np.float32)
