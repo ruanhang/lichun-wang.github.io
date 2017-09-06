@@ -21,7 +21,7 @@ favicon: /img/favicon.ico
 twitter_username:  
 github_username: ruanhang  
 facebook_username:   
-weibo_username: 春枫琰玉  
+weibo_username: 小鱼  
 linkedin_username: 
 
 # Build settings  
@@ -54,7 +54,7 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      author: "LeoSpring"
+      author: "Zoe"
       header-img: "img/pages/template.jpg" # We don't want posts without a header image, that whould mean white on white
 
 # remote images repository powered by qiniu
