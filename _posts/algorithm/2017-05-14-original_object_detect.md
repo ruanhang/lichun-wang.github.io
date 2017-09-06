@@ -12,15 +12,8 @@ header-img: "img/pages/template.jpg"
 
 
 
-
-| 数据库	                | 图像数	 | 类别数	| 应用场景	| 图像大小	| 难度 |  
-| ------------------    | ----- | ----- | ------ | ----- | ---- |  
-| Mnist	                | 60000	|10	    |字符识别	| 28*28	    | 容易   |  
-| Cifar10	            | 60000	|10	    |物体分类    | 32*32	    |  中等 |  
-| PASCAL VOC 20010-2012 |	9963    | 20	    |分类检测	| 470*380    | 很难 |  
-| ImageNet	            | 1400万  | 10万   | 物体分类    | 500*400    | 很难 |  
-| KITTI	                | 15000   |	–	| 车辆分类检测	|   –	    | 中等 |  
-| CompCars              | 30000	| 281	| 车辆分类    |	–	    | 中等 |  
+![图像数据库](http://img.blog.csdn.net/20170906200237168?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMzEyOTQyNw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+ 
 附数据集链接（知乎达人收集） 
 [https://zhuanlan.zhihu.com/p/25138563](https://zhuanlan.zhihu.com/p/25138563)
 
