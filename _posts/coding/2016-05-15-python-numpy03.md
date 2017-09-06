@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Python-Numpy小结2"
+title:  "Python-Numpy小结3"
 category: coding
 tags: [python]
 description: python
