@@ -5,40 +5,66 @@ description: "飞翔痕迹的追逐者"
 header-img: "img/pages/about.jpg"
 ---
 
-# Keep Going.
----
+## 基本信息
+姓名：阮航  
+邮箱：ruan_hang1993@163.com
 
-##  Personal Infomation
+## 教育背景
+* 2015.09-2018.04　　　南京航空航天大学　　计算机科学与技术（计算机视觉）　　硕士（保送）
+* 2011.09-2015.06　　　南京航空航天大学　　　　　　　计算机科学与技术　　　　　　学士
 
->* 王立春（LeoSpring）
-* Nanjing University of Aeronautics and Astronautics,China
-* Computer Science Master's degree in reading
-* Digital Image Process
+## 专业技能
+* 熟练掌握C++,熟悉Python、Matlab
+* 掌握**深度学习**知识以及**caffe**平台的使用
+* 熟悉基本数据结构
+* 熟悉图像处理算法
+* 了解机器学习算法
+* 英语 CET-6
 
----
+## 项目经历
+2016.09 - 2017.01　　基于深度学习的车辆检测与分类　　　算法设计与实现  
 
-## Skill Keywords
+* 关键技术：深度学习
+* 算法描述：针对高速公路卡口图像的车辆目标检测问题，通过CNN的feature maps叠加的方式实现车辆目标检测；针对目标车辆的细粒度分类问题，设计网络实现车辆细粒度分类。在高速卡口场景下，车辆目标检测精度接近100%，分类精度达93.6%。
+* 主要工作：针对高速公路卡口图像的车辆目标检测问题，通过CNN的feature maps叠加的方式实现车辆目标检测；针对目标车辆的细粒度分类问题，设计网络实现车辆细粒度分类。在高速卡口场景下，车辆目标检测精度接近100%，分类精度达93.6%。
 
->* Algorithm of Digital Image Process
-* machine learning and deep learning 
-* C++ OpenCV
-* MFC
-* Matlab
+2017.03-至今　　　　研究基于深度学习的物体检测　　　　算法设计与实现  
 
----
+* 关键技术：物体检测
+* 算法描述：研究真实道路场景中多个车辆目标的检测问题以及检测后的车型识别问题。针对真实场景下的目标模糊、目标识别率低等问题，提出使用不同尺度、不同明暗的数据训练深度学习网络，针对车型识别问题，设计深度学习网络实现多标签分类，包括车辆的类型、颜色、状态等。
+* 主要工作：阅读英文文献，学习物体检测算法原理，并熟练使用深度学习框架：R-CNN， Fast R-CNN， Faster R-CNN等，攥写英文论文。
 
-## Interests
->* Running , Aim to run 200km in this year.
-* Keeping Fit
+2015.03-2015.06　　　　基于图像的身份证识读系统　　　　算法设计与系统实现  
 
----
+* 关键技术：图像处理算法 
+* 算法描述：解决复杂背景下，身份证图像的定位和定位后身份证图像的字符识别问题，采用提取枚举直线段的方式实现身份证图像的定位和矫正。对于身份证图像采用加权平均值方式进行亮度调整，采用投影法进行字符分割，训练分类器实现字符识别。
+* 主要工作：针对复杂背景下，设计身份证图像的定位算法，提取身份证图像。对提取后的身份证图像设计身份证字符识别算法，基于VS平台，采用C++开发，实现基于图像的身份证识别系统。 
 
-## Welcome to contact
+  
+2015.09-2015.11　　　　128条码定位与识别　　　　算法设计与实现
 
->* WebSite：[www.wanglichun.tech](http://www.wanglichun.tech)
-* Email：[lichun_wang1993@163.com]()
-* GitHub:[http://github.com/lichun-wang](http://github.com/lichun-wang)
-* Sina Weibo：[春枫琰玉](http://weibo.com/p/1005052271697851/home?from=page_100505&mod=TAB&is_all=1#place)
+* 关键技术：图像处理算法
+* 项目简介：对图像进行预处理，然后通过查找直线，并对相似直线聚类，实现128条码的定位，利用阈值分割出条码，编写算法根据编码规则进行条码识别。
+* 主要工作：作为项目的成员之一，负责条码识别的算法设计，包括图像预处理阶段，图像二值分割阶段等，并完成条码定位部分。通过图像预处理，聚类直线，实现128条码的准确定位。
+
+
+
+## 学术成果：
+* 《Multiple Vehicle Detection and Classification Based on Weighted Feature Map》
+* 《A Framework of Vehicle Detection and Multi-task Recognition》 
+
+## 校内工作：
+* 本科期间担任院中心组副组长，沟通协调各部门工作，配合组织各项活动。
+* 本科期间同时担任班级团支书，组织读书活动，党员学习活动等。
+* 研究生期间担任班级班长，负责班级日常工作。
+
+## 所获奖项：
+* 研究生学业奖学金一等奖  
+* 校优秀学生干部  优秀团员  三好学生  社会实践先进个人  
+* 三好研究生
+
+## 自我评价:
+* 团队意识，集体荣誉感较强，对事物的新鲜看法多，具备学习新知识的能力。
 
 
 
