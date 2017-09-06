@@ -1,17 +1,17 @@
 # Site settings
-title: Spring's Idea
+title: Zoe's Idea
 header-img: "img/pages/main.jpg"
-tagline: "LeoSpring"  
+tagline: "Zoe"  
 description: "众里寻他千百度，蓦然回首，那人却在灯火阑珊处"  
 baseurl: ""
-url: "http://wanglichun.tech"
+url: "http://ruanhang.wang"
 #url: "https://traceflight.github.io"  
 #url: "http://localhost:4000"
 
 # About/contact
 owner: 
-  name: "LeoSpring"
-  email: lichun_wang1993@163.com
+  name: "Zoe"
+  email: ruanhang1993@163.com
   bio: " "
 
 # Data
@@ -19,7 +19,7 @@ gavatar: /img/head.png
 favicon: /img/favicon.ico
 
 twitter_username:  
-github_username: lichun-wang  
+github_username: ruanhang  
 facebook_username:   
 weibo_username: 春枫琰玉  
 linkedin_username: 
@@ -64,7 +64,7 @@ imageurl: http://7xsbrq.com1.z0.glb.clouddn.com
 comments :
   provider : duoshuo
   duoshuo :
-      short_name : LeoSpring
+      short_name : Zoe
 #  provider : Disqus
 #  disqus :
 #      short_name : traceflightblog
