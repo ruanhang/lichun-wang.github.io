@@ -13,8 +13,8 @@ description: caffe
 * 因为在linux下面，使用sudo以及root权限时，是可以对任意一个文件进行操作处理的，即使是正在使用的系统文件。  
 * caffe中出现下面这些问题说明在安装过程中有一些步骤没有按照官网说明来，如果按照官网说明一步步安装，一般会一次性通过。  
 
-**Caffe编译问题及解决方案汇总：**
- 在编译caffe代码时，之前的各种错误会显现出来，这时候会出现各种各样的问题：
+**Caffe编译问题及解决方案汇总：**  
+ 在编译caffe代码时，之前的各种错误会显现出来，这时候会出现各种各样的问题：  
 **问题1：**  
 ```
 Error: 'make all' 'make test'
@@ -58,12 +58,12 @@ export PATH
  
 ```python
 touch python/caffe/proto/__init__.py
-　　　　　CXX/LD -o python/caffe/_caffe.so python/caffe/_caffe.cpp
-　　　　　PROTOC (python) src/caffe/proto/caffe.proto
- 　　　　   python/caffe/_caffe.cpp:1:52: fatal error: Python.h: No such file or directory
-　　　　　 #include <Python.h>  // NOLINT(build/include_alpha)
-　　　　　compilation terminated.
-　　　　　make: *** [python/caffe/_caffe.so] Error 1
+CXX/LD -o python/caffe/_caffe.so python/caffe/_caffe.cpp
+PROTOC (python) src/caffe/proto/caffe.proto
+python/caffe/_caffe.cpp:1:52: fatal error: Python.h: No such file or directory
+#include <Python.h>  // NOLINT(build/include_alpha)
+compilation terminated.
+make: *** [python/caffe/_caffe.so] Error 1
 ```
 
 因为我的python环境安装的是spyder，而不是Anaconda，因此在makefile.config里面需要对路径进行设置
@@ -72,13 +72,12 @@ touch python/caffe/proto/__init__.py
 # Verify anaconda location, sometimes it's in root.
 # ANACONDA_HOME := $(HOME)/anaconda
 # PYTHON_INCLUDE := $(ANACONDA_HOME)/include \
-        # $(ANACONDA_HOME)/include/python2.7 \
-        # $(ANACONDA_HOME)/lib/python2.7/site-packages/numpy/core/include \
+# $(ANACONDA_HOME)/include/python2.7 \
+# $(ANACONDA_HOME)/lib/python2.7/site-packages/numpy/core/include \
 
 # We need to be able to find libpythonX.X.so or .dylib.
 PYTHON_LIB := /usr/lib
 # PYTHON_LIB := $(ANACONDA_HOME)/lib
-复制代码
 Python.h  can running sudo find / -name 'Python.h' to find the path.
 ```
  
@@ -89,15 +88,17 @@ Linux一些常用命令记录及解释：
 ```　　
 　　sudo dpkg -i softname.deb
 ```
-　　其中dpkg为Debian Package的缩写，dpkg常用命令有： -i 安装 ；-r 卸载  
-　　dpkg命令是一个底层的安装工具，apt是dpkg上层工具，用于从远程获取软件包以及处理复杂的软件包之间的关系。  
-　　apt常用的用法，apt-get后面接install 或remove对软件进行安装和卸载  
+其中dpkg为Debian Package的缩写，dpkg常用命令有： -i 安装 ；-r 卸载  
+dpkg命令是一个底层的安装工具，apt是dpkg上层工具，用于从远程获取软件包以及处理复杂的软件包之间的关系。  
+apt常用的用法，apt-get后面接install 或remove对软件进行安装和卸载  
+
 ```
 　　apt-get install <package>
 ``` 
  
 2.设置系统root密码   
-　　如果使用光盘安装Ubuntu，按照安装向导来进行帐号、分区等设置，而在这个安装向导程序中没有提示进行root密码的设置，所以在 Ubuntu安装好后需要手动设置root密码。而如果是跳过安装向导，点击桌面上的Install图标来进行安装的话，在安装过程中则会提示设置 root密码。当然，如果需要修改root密码也可以使用以下方法：打开终端，在终端中输入命令：  
+如果使用光盘安装Ubuntu，按照安装向导来进行帐号、分区等设置，而在这个安装向导程序中没有提示进行root密码的设置，所以在 Ubuntu安装好后需要手动设置root密码。而如果是跳过安装向导，点击桌面上的Install图标来进行安装的话，在安装过程中则会提示设置 root密码。当然，如果需要修改root密码也可以使用以下方法：打开终端，在终端中输入命令：  
+
 ```  
 sudo passwd root
 ```
