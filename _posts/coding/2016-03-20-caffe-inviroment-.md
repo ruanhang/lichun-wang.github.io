@@ -121,17 +121,17 @@ cd /usr/local/src
 sudo rm -r ./folder-name
 ```  
  
-3. 使用命令更改文件或文件夹名  
+使用命令更改文件或文件夹名  
 ```
 sudo mv 旧文件名 新文件名
 ```
  
-4. 使用显示内核版本  
+使用显示内核版本  
 ```
 uname a
 ```
 
-5.Ubuntu批量复制删除文件命令  
+Ubuntu批量复制删除文件命令  
 批量复制文件命令  
 ```
 sudo cp -R /srcfolder/*  /dstfolder
@@ -210,7 +210,7 @@ export PYTHONPATH=/home/startag/caffe/python/:/home/startag/caffe/python/caffe/
 注销或者重启，路径生效。  
  
 import caffe时错误提示  
-1. 错误提示：ImportError: No module named skimage.io  
+错误提示：ImportError: No module named skimage.io  
 解决方法：  
 直接使用终端安装：  
 ```
@@ -238,10 +238,7 @@ ImportError: cannot import name symbol_database
 ```
 sudo pip install --upgrade protobuf
 ```
- 
- 
- 
-6. caffe中的python接口和matlab接口配置及常见问题汇总：   
+caffe中的python接口和matlab接口配置及常见问题汇总：   
 在配置好了caffe环境之后，我们需要使用到caffe中的接口。caffe的接口分为3种，cmd接口，matlab接口和python接口。  
 cmd接口在使用make all -j8过程中已经生成，位置在tools里面。而matlab接口特别是python接口需要配置，期间还会遇到各种各样的问题。  
 在对caffe的matlab和python接口进行编译时可能会遇到g++版本过高问题，解决方法：Caffe使用：安装gcc4.7和g++4.7。  
@@ -262,7 +259,7 @@ ln -s caffe-root 目标文件夹
  构建fast-rcnn时提示：OpenCV - cannot find module cv2
 解决方法
 ```
-&. 使用draw_net.py绘制网络结构方法：  
+使用draw_net.py绘制网络结构方法：  
 使用draw_net.py绘制网络结构时提示错误信息：  
 ```
 permission denied: 
@@ -282,7 +279,7 @@ Install main package
 sudo aptitude install cuda
 ```
  
-2. caffe中安装build-essential提示包损坏解决方法  
+2.caffe中安装build-essential提示包损坏解决方法  
 ```
 sudo apt-get update
 sudo apt-get upgrade
