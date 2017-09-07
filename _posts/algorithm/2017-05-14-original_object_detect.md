@@ -3,7 +3,7 @@ layout: post
 title:  "传统物体检测"
 category: [algorithm ]
 tags: [object detect,algorithms]
-description: Sort
+description: 
 header-img: "img/pages/template.jpg"
 --
 
