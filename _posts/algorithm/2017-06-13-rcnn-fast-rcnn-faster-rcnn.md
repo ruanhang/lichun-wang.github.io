@@ -144,7 +144,7 @@ RPN的实现方式：在conv5-3的卷积feature map上用一个n*n的滑窗（�
 (3)个人理解：全连接层本来就是特殊的卷积层，如果产生256或512维的fc特征，事实上可以用Num_out=256或512, kernel_size=3*3, stride=1的卷积层实现conv5-3到第一个全连接特征的映射.然后再用两个Num_out分别为2*9=18和4*9=36，kernel_size=1*1，stride=1的卷积层实现上一层特征到两个分支cls层和reg层的特征映射.  
 (4)注意：这里2*9中的2指cls层的分类结果包括前后背景两类，4*9的4表示一个Proposal的中心点坐标x，y和宽高w，h四个参数.采用卷积的方式实现全连接处理并不会减少参数的数量，但是使得输入图像的尺寸可以更加灵活.在RPN网络中，我们需要重点理解其中的anchors概念，Loss fucntions计算方式和RPN层训练数据生成的具体细节.  
 
-[3](http://images2015.cnblogs.com/blog/804917/201703/804917-20170316174539948-64364204.png)
+![3](http://images2015.cnblogs.com/blog/804917/201703/804917-20170316174539948-64364204.png)
 
 Anchors:字面上可以理解为锚点，位于之前提到的n*n的sliding window的中心处.对于一个sliding window,我们可以同时预测多个proposal，假定有k个.k个proposal即k个referenceboxes，每一个reference box又可以用一个scale，一个aspect_ratio和sliding window中的锚点唯一确定.所以，我们在后面说一个anchor,你就理解成一个anchor box 或一个reference box.作者在论文中定义k=9，即3种scales和3种aspect_ratio确定出当前slidingwindow位置处对应的9个reference boxes， 4*k个reg-layer的输出和2*k个cls-layer的score输出.对于一幅W*H的feature map,对应W*H*k个锚点.所有的锚点都具有尺度不变性.  
 Loss functions:
