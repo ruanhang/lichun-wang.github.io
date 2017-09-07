@@ -5,7 +5,7 @@ category: [algorithm ]
 tags: [object detect,algorithms]
 description: object detect
 header-img: "img/pages/template.jpg"
---
+---
 
 本文转载自很好的博文：[http://www.cnblogs.com/dudumiaomiao/p/6560841.html](http://www.cnblogs.com/dudumiaomiao/p/6560841.html)
 ### R-CNN:
