@@ -3,9 +3,9 @@ layout: post
 title:  "传统物体检测"
 category: [algorithm ]
 tags: [object detect,algorithms]
-description: 
+description: object detect
 header-img: "img/pages/template.jpg"
---
+---
 
 
 1.1 图像数据库汇总
