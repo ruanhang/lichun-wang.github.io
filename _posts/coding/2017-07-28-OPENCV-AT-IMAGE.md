@@ -2,8 +2,8 @@
 layout: post
 title:  "Opencv访问图像像素"
 category: coding
-tags: [ｃ++]
-description: c++
+tags: [OpenCV]
+description: OpenCV
 ---  
 
 1.图像存储方式
