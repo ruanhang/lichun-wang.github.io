@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "21天实战-Layer"
+title:  "21天Caffe实战-Layer"
 category: coding
 tags: [Caffe]
 description: Caffe
