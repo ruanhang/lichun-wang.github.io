@@ -12,13 +12,14 @@ description: Caffe
 * 自定义一个计算层，实现y=x^power的功能  
 * 对自定义层进行测试
 * 自定义一个新的输入层
+
 ### 2.选择继承的类
 任何一个层都可以被继承，然后进行重写函数
 
 ![http://img.blog.csdn.net/20170908093920905?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMzEyOTQyNw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast](http://img.blog.csdn.net/20170908093920905?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMzEyOTQyNw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
 
 ### 3.自定义Layer步骤
-步骤：
+步骤：  
 1、创建新定义的头文件include/caffe/layers/my_neuron_layer.hpp
 
 * 重新Layer名的方法：virtual inline const char*  type() const { return "MyNeuron"; }
