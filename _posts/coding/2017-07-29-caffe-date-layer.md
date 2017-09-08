@@ -267,7 +267,7 @@ INSTANTIATE_CLASS(BasePrefetchingDataLayer);
 }  // namespace caffe
 
 ```
-4.datalayer数据结构  
+### 4.datalayer数据结构  
 
 ```
 namespace caffe {
