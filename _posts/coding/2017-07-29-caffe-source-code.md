@@ -25,7 +25,8 @@ Caffe框架主要有五个组件，Blob，Solver，Net，Layer，Proto，其结�
 
 ### 4.Solver解析
 接下来切回正题，我们看看Solver这个优化对象在Caffe中是如何实现的。SolverRegistry这个类就是我们看到的上面的factory类，负责给我们一个优化算法的产品，外部只需要把数据和网络结构定义好，它就可以自己优化了。  
-Solver<Dtype>* CreateSolver(const SolverParameter& param)这个函数就是工厂模式下的CreateProduct的操作， Caffe中这个SolverRegistry工厂类可以提供给我们6种产品（优化算法）：  
+Solver<Dtype>* CreateSolver(const SolverParameter& param)这个函数就是工厂模式下的CreateProduct的操作， Caffe中这个SolverRegistry工厂类可以提供给我们6种产品（优化算法）：    
+
 ![http://img.blog.csdn.net/20170908103157086?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMzEyOTQyNw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast](http://img.blog.csdn.net/20170908103157086?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMzEyOTQyNw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
 
 这六种产品的功能都是实现网络的参数更新，只是实现方式不一样。那我们来看看他们的使用流程吧。当然这些产品类似上面Product类中的Operation，每一个Solver都会继承Solve和Step函数，而每个Solver中独有的仅仅是ApplyUpdate这个函数里面执行的内容不一样，接口是一致的，这也和我们之前说的工厂生产出来的产品一样功能一样，细节上有差异，比如大多数电饭煲都有煮饭的功能，但是每一种电饭煲煮饭的加热方式可能不同，有底盘加热的还有立体加热的等。接下里我们看看Solver中的关键函数。  
@@ -51,7 +52,7 @@ Net的类中的关键函数简单剖析：
 * 4.ToProto函数完成网络的序列化到文件，循环调用了每个层的ToProto函数。
 
 ### 6.Layer解析
-Layer是Net的基本组成单元，例如一个卷积层或一个Pooling层。本小节将介绍Layer类的实现。
+Layer是Net的基本组成单元，例如一个卷积层或一个Pooling层。本小节将介绍Layer类的实现。  
 （1）Layer的继承结构
 
 ![http://img.blog.csdn.net/20170908103259198?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMzEyOTQyNw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast](http://img.blog.csdn.net/20170908103259198?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMzEyOTQyNw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
@@ -129,7 +130,7 @@ BlobProto其实就是Blob序列化成Proto的类，Caffe模型文件使用了该
 
 ![http://img.blog.csdn.net/20170908103529584?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMzEyOTQyNw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast](http://img.blog.csdn.net/20170908103529584?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMzEyOTQyNw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
 
-至此Caffe的序列化模型的方式就完成了。
+至此Caffe的序列化模型的方式就完成了。  
 （2）Proto.txt的简单说明
 Caffe网络的构建和Solver的参数定义均由此类型文件完成。Net构建过程中调用ReadProtoFromTextFile将所有的网络参数读入。然后调用上面的流程进行整个caffe网络的构建。这个文件决定了怎样使用存在caffe model中的每个blob是用来做什么的，如果没有了这个文件caffe的模型文件将无法使用，因为模型中只存储了各种各样的blob数据，里面只有float值，而怎样切分这些数据是由prototxt文件决定的。
 
